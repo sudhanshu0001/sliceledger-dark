@@ -1,0 +1,104 @@
+.enter-wrap {
+    margin: 50px 0px 0px;
+    position: relative;
+    border-top: 1px solid var(--text-color);
+    border-bottom: 1px solid var(--text-color);
+
+    &::after {
+        position: absolute;
+        top: 0px;
+        left: 50%;
+        background-color: var(--text-color);
+        height: 100%;
+        width: 1px;
+        content: "";
+    }
+
+    &::before {
+        position: absolute;
+        top: -52px;
+        left: 50%;
+        background-color: var(--text-color);
+        height: 52px;
+        width: 1px;
+        content: "";
+    }
+
+    .enter-inner {
+        padding: 70px 0px;
+
+        .enter-img {
+            width: 80%;
+            margin-left: auto;
+        }
+    }
+
+    .enter-article {
+        .enter-title {
+            .h3-title {
+                padding-bottom: 25px !important;
+            }
+
+            p {
+                font-size: 22.514px;
+                line-height: 33.771px;
+            }
+
+            &:nth-child(1) p {
+                padding-bottom: 25px !important;
+            }
+
+            .enter-about {
+                color: #ABABAB;
+            }
+        }
+
+        .enter-list {
+            ul {
+                li {
+                    color: #D3D3D3;
+                    font-family: NekstRegular;
+                    font-size: 22.514px;
+                    font-weight: 400;
+                    line-height: 33.771px;
+                    position: relative;
+                    margin-bottom: 10px;
+                    &::before {
+                        position: absolute;
+                        top: 10px;
+                        left: -29px;
+                        height: 18px;
+                        width: 18px;
+                        background-color: transparent;
+                        border: 4px solid #fff;
+                        content: "";
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:991px) {
+    .enter-wrap .enter-inner .enter-img{
+        width: 100%;
+    }
+}
+@media screen and (max-width:1440px) {
+    .enter-wrap .enter-inner .enter-img{
+        position: sticky;
+        top: 50px;
+    }
+    
+}
+@media screen and (max-width:575px) {
+    .enter-article{
+     background-color: var(--primary-color);
+     margin: 10px 0px 90px;
+     z-index: 1;
+     position: relative;
+    }
+    .enter-wrap .enter-inner .enter-img{
+        z-index: 1;
+        background-color: var(--primary-color);
+    }
+}

@@ -1,0 +1,228 @@
+.wallet-banner-wrap {
+    padding: 188px 0px 25px;
+    background: url("../../../images/wallet/walletBanner.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: -73px;
+    position: relative;
+    // border-bottom: 1px solid var(--text-color);
+
+    &::after {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, transparent, #000);
+        content: "";
+    }
+
+    // &::before {
+    //     position: absolute;
+    //     bottom: -2px;
+    //     right: 0px;
+    //     width: 79%;
+    //     height: 2px;
+    //     background: #000;
+    //     content: "";
+    //     height: 35px;
+    // }
+
+    .h3-title {
+        position: relative;
+        z-index: 1;
+    }
+    .bottom-line{
+        position: relative;
+        top: 25px;
+        svg{
+            transform: scale(1);
+            width: 100%;
+        }
+    }
+    // .bottom-line {
+    //     border-bottom: 1px solid #fff;
+    //     position: relative;
+    //     top: -8px;
+
+    //     &::after {
+    //         position: absolute;
+    //         width: 23%;
+    //         height: 1px;
+    //         background-color: #000;
+    //         content: "";
+    //         left: 0px;
+    //         top: 0px;
+    //     }
+
+    //     &::before {
+    //         position: absolute;
+    //         width: 1px;
+    //         height: 49px;
+    //         background: #fff;
+    //         content: "";
+    //         left: 22%;
+    //         top: -7px;
+    //         transform: rotate(46deg);
+    //         z-index: 26;
+    //     }
+    // }
+}
+
+.wallet-banner-article-wrap {
+    .row {
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .wallet-banner-article {
+        p {
+            font-family: NekstRegular;
+            font-size: 31.51px;
+            font-weight: 400;
+            line-height: 54.271px;
+        }
+    }
+
+    .wallet-banner-btn-wrap {
+        display: flex;
+        gap: 30px;
+        margin-top: 70px;
+
+        .wallet-banner-btn {
+            padding: 0px;
+            position: relative;
+
+            &:focus,
+            &:active {
+                outline: 0px !important;
+                box-shadow: none !important;
+                border: none;
+            }
+
+            .wallet-banner-btn-icn {
+
+                display: flex;
+                align-items: center;
+                position: absolute;
+                top: 50%;
+                left: 0px;
+                transform: translate(5%, -50%);
+                gap: 10px;
+
+
+                .wallet-banner-btn-icn-text {
+                    h6 {
+                        color: #000;
+                        font-family: NekstRegular;
+                        font-size: 20px;
+                        font-weight: 400;
+                        line-height: 20px;
+                        margin-bottom: 0px;
+                    }
+
+                    p {
+                        color: #000;
+                        font-family: NekstRegular;
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 21px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1500px) {
+    .wallet-banner-wrap::before {
+        width: 70%;
+    }
+
+
+}
+
+@media screen and (max-width:1450px) {
+    .wallet-banner-article-wrap {
+        padding: 50px 0px;
+    }
+}
+@media screen and (max-width:991px) {
+    .wallet-banner-wrap .bottom-line svg{
+        stroke-width: 4px;
+    }
+}
+@media screen and (max-width:767px) {
+    .wallet-banner-wrap::before {
+        width: 55%;
+    }
+
+
+}
+
+@media screen and (max-width:575px) {
+    .wallet-banner-article-wrap .wallet-banner-btn-wrap {
+        margin-top: 30px;
+    }
+
+    .wallet-banner-wrap::before {
+        width: 20%;
+    }
+
+
+    .wallet-banner-article-wrap {
+        padding: 20px 0px;
+    }
+    .wallet-banner-article-wrap .wallet-banner-article p {
+        font-size: 24px;
+        line-height: 35px;
+    }
+    .wallet-banner-wrap .bottom-line svg path{
+        transform: scale(2);
+    }
+}
+
+@media screen and (max-width:480px) {
+    .wallet-banner-article-wrap .wallet-banner-btn-wrap {
+        gap: 10px;
+    }
+
+    .wallet-banner-article-wrap .wallet-banner-btn-wrap .wallet-banner-btn .wallet-banner-btn-icn .wallet-banner-btn-icn-text h6 {
+        font-size: 16px;
+    }
+
+    .wallet-banner-article-wrap .wallet-banner-btn-wrap .wallet-banner-btn .wallet-banner-btn-icn .wallet-banner-btn-icn-text p {
+        font-size: 10px;
+    }
+
+    .wallet-banner-btn-icn svg {
+        width: 30px;
+    }
+
+    .wallet-banner-article-wrap .wallet-banner-btn-wrap .wallet-banner-btn>svg {
+        width: 180px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .wallet-banner-article-wrap .wallet-banner-btn-wrap {
+        flex-direction: column;
+    }
+
+    .wallet-banner-article-wrap .wallet-banner-btn-wrap .wallet-banner-btn .wallet-banner-btn-icn {
+        transform: translate(-50%, -50%);
+        left: 50%;
+    }
+}
+
+@media screen and (max-width:300px) {
+    .wallet-banner-article-wrap .wallet-banner-btn-wrap .wallet-banner-btn .wallet-banner-btn-icn .wallet-banner-btn-icn-text p {
+        font-size: 6px;
+    }
+
+    .wallet-banner-article-wrap .wallet-banner-btn-wrap .wallet-banner-btn .wallet-banner-btn-icn .wallet-banner-btn-icn-text h6 {
+        font-size: 11px;
+        line-height: 8px;
+    }
+}

@@ -1,0 +1,200 @@
+@import "./color_variable";
+
+@font-face {
+    font-family: SyneBold;
+    src: url("../fonts/Syne/static/Syne-ExtraBold.ttf")
+}
+
+@font-face {
+    font-family: NekstLight;
+    src: url("../fonts/Nekst/Nekst-Light.otf")
+}
+
+@font-face {
+    font-family: NekstThin;
+    src: url("../fonts/Nekst/Nekst-Thin.otf")
+}
+
+@font-face {
+    font-family: NekstMedium;
+    src: url("../fonts/Nekst/Nekst-Medium.otf")
+}
+
+@font-face {
+    font-family: NekstRegular;
+    src: url("../fonts/Nekst/Nekst-Regular.otf")
+}
+
+@font-face {
+    font-family: NekstSemiBold;
+    src: url("../fonts/Nekst/Nekst-SemiBold.otf")
+}
+
+@font-face {
+    font-family: NekstBold;
+    src: url("../fonts/Nekst/Nekst-Bold.otf")
+}
+
+@font-face {
+    font-family: NekstBlack;
+    src: url("../fonts/Nekst/Nekst-Black.otf")
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Nekst;
+    letter-spacing: 0.7px;
+}
+
+body {
+    background-color: var(--primary-color) !important;
+    color: var(--text-color) !important;
+    font-family: Nekst !important;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure,
+ul,
+li,
+a,
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
+.h1-title {
+    color: var(--text-color);
+    font-family: SyneBold;
+    font-size: 58px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 0px !important;
+    line-height: 60px
+}
+
+.h2-title {
+    color: var(--text-color);
+    font-family: NekstBold;
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 0px !important;
+}
+
+.h3-title {
+    color: var(--text-color);
+    font-family: NekstBold;
+    font-size: 41px;
+    font-weight: 700;
+    margin-bottom: 0px !important;
+}
+
+p {
+    color: var(--text-color);
+    font-family: NekstRegular;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 400;
+    margin-bottom: 0px !important;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+}
+
+a,
+.nav-link {
+    color: var(--text-color) !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    transition: all .4s ease-in-out 0s !important;
+
+    &:hover {
+        color: var(--secondary-color) !important;
+
+    }
+}
+
+.active {
+    color: var(--secondary-color);
+}
+
+.nav-link {
+    font-family: NekstSemiBold;
+    font-size: 22.514px;
+    font-weight: 600;
+    line-height: 33.771px;
+    padding: 10px 22px !important;
+    border-bottom: 2px solid transparent !important;
+
+    &.active {
+        color: var(--secondary-color) !important;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: "";
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70%;
+            height: 3px;
+            background: var(--secondary-color);
+            transition: .3s;
+            bottom: 0;
+        }
+    }
+
+    &:hover {
+        border-bottom: 2px solid var(--secondary-color) !important;
+
+    }
+}
+
+.container-fluid {
+    padding-left: 100px !important;
+    padding-right: 100px !important;
+}
+
+#wrapper {
+    height: 100vh;
+    width: 100vw;
+    position: fixed !important;
+    left: 0;
+    top: 0;
+    z-index: 100000;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    will-change: transform;
+}
+
+.border-wrap {
+    border: 1px solid #fff;
+    padding: 50px 0px;
+}
+
+.modal {
+    z-index: 999999 !important;
+}
+
+@media screen and (max-width:991px) {
+    .container-fluid {
+        padding-right: 15px !important;
+        padding-left: 15px !important;
+    }
+}

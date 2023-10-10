@@ -1,0 +1,166 @@
+.counter-wrap {
+
+    .counter-inner-wrap {
+        border: 1px solid #D9D9D9;
+        border-radius: 16px;
+        padding: 50px 16px;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            height: 65%;
+            width: 2px;
+            background-color: var(--primary-color);
+            content: "";
+            left: 0px;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &::after {
+            position: absolute;
+            height: 65%;
+            width: 2px;
+            background-color: var(--primary-color);
+            content: "";
+            right: -2px;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .h6-title {
+            font-family: NekstRegular;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 21px;
+            text-transform: uppercase;
+            margin-bottom: 0px;
+            margin-top: -23px;
+        }
+
+        .counter-number {
+            padding-top: 30px;
+
+            span {
+                display: block;
+                color: var(--secondary-color);
+                text-align: center;
+                font-family: NekstSemiBold;
+                font-size: 59px;
+                font-weight: 700;
+                line-height: 26.4px;
+                padding: 30px 0px;
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                    top: 50%;
+                    left: 0px;
+                    background-color: #0052ff;
+                    height: 25px;
+                    width: 25px;
+                    content: "";
+                    border-radius: 50%;
+                    transform: translate(0px, -50%);
+                    box-shadow: 0px 0px 20px 0px #0052ff;
+                }
+            }
+        }
+
+        .counter-shape {
+            span {
+                width: 5px;
+                height: 6px;
+                background-color: #D9D9D9;
+                display: inline-block;
+                position: absolute;
+
+                &:nth-child(1) {
+                    bottom: 20px;
+                    left: 16px;
+                }
+
+                &:nth-child(2) {
+                    top: 20px !important;
+                    right: 16px !important;
+                }
+
+                &:nth-child(3) {
+                    bottom: 20px !important;
+                    right: 16px !important;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1650px) {
+    .counter-wrap .counter-inner-wrap .counter-number span {
+        font-size: 36px;
+    }
+
+}
+
+@media screen and (max-width:1460px) {
+    .counter-wrap .counter-inner-wrap .h6-title {
+        font-size: 12px;
+
+    }
+}
+
+@media screen and (max-width:1280px) {
+
+    .counter-wrap .counter-inner-wrap .counter-number span {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .counter-wrap .counter-inner-wrap {
+
+        margin-bottom: 20px;
+    }
+
+    .counter-wrap .counter-inner-wrap .h6-title {
+        font-size: 16px;
+    }
+
+    .counter-wrap .counter-inner-wrap .counter-number span {
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .counter-wrap .counter-inner-wrap .counter-number {
+        padding-top: 10px;
+    }
+
+    .counter-wrap .counter-inner-wrap {
+        padding: 30px 16px;
+    }
+
+    .counter-wrap .counter-inner-wrap .counter-shape span:nth-child(2) {
+        top: 50px !important;
+    }
+    .counter-wrap .counter-inner-wrap .h6-title{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width:575px) {
+    .counter-wrap .counter-inner-wrap .h6-title{
+        font-size: 16px;
+    }
+    .counter-wrap .counter-inner-wrap .counter-shape span:nth-child(2){
+        top: 35px !important;
+    }
+}
+@media screen and (max-width:330px) {
+    .counter-wrap .counter-inner-wrap .h6-title{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:300px) {
+    .counter-wrap .counter-inner-wrap .h6-title{
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,33 @@
+.slice-video-wrap {
+    padding: 90px 0px;
+
+    .slice-video {
+        position: relative;
+            button {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            &:focus{
+                outline: 0px;
+                box-shadow: none;
+                border: 0px;
+            }
+            }
+            &::after{
+                width: 90%;
+                height: 2px;
+                background-color: var(--text-color);
+                content: "";
+                position: absolute;
+                left: 5%;
+                top: 50%;
+                margin: 0px auto;
+            }
+    }
+}
+@media screen and (max-width:991px) {
+    .slice-video-wrap{
+        padding: 40px 0px;
+    }
+}

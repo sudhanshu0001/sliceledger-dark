@@ -1,0 +1,243 @@
+.app-footer {
+    padding: 50px 0px;
+    border-top: 1px solid var(--text-color);
+    position: relative;
+
+    &::after {
+        height: 80%;
+        width: 2px;
+        background-color: var(--text-color);
+        left: 47%;
+        top: 10%;
+        content: "";
+        position: absolute;
+    }
+
+    .container {
+        max-width: 1600px;
+        position: relative;
+        padding-bottom: 50px;
+
+        &::after {
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            height: 2px;
+            width: 100%;
+            content: "";
+            background-color: var(--text-color);
+        }
+
+        .row {
+            justify-content: space-between;
+        }
+    }
+
+    .footer-form-wrap {
+        .form-title {
+            margin-bottom: 50px;
+        }
+
+        .footer-form {
+            .form-control {
+                border: 1px solid var(--text-color);
+                border-radius: 0px;
+                background-color: transparent;
+                color: var(--text-color);
+                &::placeholder {
+                    color: var(--text-color);
+                    font-size: 16px;
+                    font-weight: 600;
+                    font-family: NekstSemiBold;
+                }
+            }
+
+            textarea {
+                height: 200px;
+                resize: none;
+            }
+
+            .form-btn {
+                border: 1px solid var(--text-color);
+                color: var(--text-color);
+                border-radius: 0px;
+                padding: 10px 30px;
+            }
+        }
+    }
+
+    .footer-contact-wrap {
+        .form-contact-title {
+            margin-bottom: 50px;
+        }
+
+        .form-contact-info {
+            .h6-title {
+                font-family: NekstBold;
+                font-size: 22px;
+                font-weight: 600;
+                margin-bottom: 15px;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 24px;
+                margin-bottom: 10px !important;
+            }
+        }
+
+        .form-contact-links {
+            .contact-links {
+                padding: 0px;
+
+                li {
+                    display: inline-block;
+                    padding: 10px;
+
+                    a {
+                        font-family: NekstBold;
+                        color: var(--secondary-color) !important;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        .form-copy {
+            padding: 0px;
+
+            li {
+                display: inline-block;
+                padding: 10px;
+
+                a {
+                    font-family: NekstBold;
+                    color: var(--text-color) !important;
+                    text-decoration: none;
+                    position: relative;
+
+                }
+
+                &:nth-child(2) a {
+                    &::after {
+                        position: absolute;
+                        height: 100%;
+                        width: 2px;
+                        background-color: var(--text-color);
+                        content: "";
+                        left: -10px;
+                        top: 0px
+                    }
+
+                    &::before {
+                        position: absolute;
+                        height: 100%;
+                        width: 2px;
+                        background-color: var(--text-color);
+                        content: "";
+                        right: -10px;
+                        top: 0px
+                    }
+                }
+            }
+        }
+
+        .form-social-links-wrap {
+            border-top: 1px solid var(--text-color);
+            padding: 25px 0px;
+
+            ul {
+                padding: 0px;
+
+                li {
+                    display: inline-block;
+                    padding: 10px;
+
+                    .form-social-links {
+                        text-decoration: none;
+                        height: 40px;
+                        width: 40px;
+                        background-color: var(--text-color);
+                        display: inline-block;
+                        text-align: center;
+
+                        svg {
+                            vertical-align: text-top;
+                            color: var(--primary-color);
+                            font-size: 30px;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:991px) {
+
+    .app-footer .footer-form-wrap .form-title,
+    .app-footer .footer-contact-wrap .form-contact-title {
+        margin-bottom: 20px !important;
+    }
+
+    .app-footer .footer-form-wrap .form-title .h3-title,
+    .app-footer .footer-contact-wrap .form-contact-title .h3-title {
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width:610px) {
+
+    .app-footer .footer-form-wrap .form-title .h3-title,
+    .app-footer .footer-contact-wrap .form-contact-title .h3-title {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width:575px) {
+
+    .app-footer .footer-form-wrap .form-title .h3-title,
+    .app-footer .footer-contact-wrap .form-contact-title .h3-title {
+        font-size: 35px;
+    }
+
+    .footer-contact-wrap {
+        margin-top: 30px;
+        position: relative;
+        z-index: 1;
+        margin: 30px 0px 0px;
+        background-color: #000;
+    }
+
+    .app-footer .footer-form-wrap .footer-form .form-control {
+        background-color: #000;
+        position: relative;
+        z-index: 1;
+    }
+
+    .app-footer .footer-form-wrap .footer-form .form-btn {
+        display: block;
+        width: 100%;
+        background-color: #000;
+        position: relative;
+        z-index: 1;
+    }
+}
+@media screen and (max-width:360px) {
+    .app-footer .footer-contact-wrap .form-copy li:nth-child(2) a::before, .app-footer .footer-contact-wrap .form-copy li:nth-child(2) a::after{
+        display: none;
+    }
+}
+@media screen and (max-width:380px) {
+    .app-footer .footer-contact-wrap .form-social-links-wrap ul li{
+        padding: 2px;
+    }
+    .app-footer .footer-contact-wrap .form-social-links-wrap ul li .form-social-links{
+        height: 30px;
+        width: 30px;
+    }
+    .app-footer .footer-contact-wrap .form-social-links-wrap ul li .form-social-links svg{
+        font-size: 22px;
+    }
+}

@@ -1,8 +1,9 @@
-import './globals.css'
+import "../../assets/style/main.scss"
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import Header from '../../components/common/Header'
+import Footer from '../../components/common/Footer'
+import "bootstrap/dist/css/bootstrap.min.css"
+import Grained from "../../components/common/Grained"
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +17,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body suppressHydrationWarning={true}>
+        <Grained />
+        <Header />
+        {children}
+        <Footer />
+        <script src="https://cdn.rawgit.com/sarathsaleem/grained/master/grained.js"></script>
+      </body>
     </html>
   )
 }

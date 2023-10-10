@@ -1,0 +1,41 @@
+.empowering-content-wrap {
+    padding: 80px 0px;
+    position: relative;
+
+   
+
+    .empowering-content-card {
+        margin: 0px auto;
+        border: 1px solid var(--text-color);
+        max-width: 600px;
+        padding: 60px 20px;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 50px;
+
+        &::before {
+            position: absolute;
+            bottom: -25px;
+            right: 20px;
+            height: 162px;
+            border: none;
+            content: "";
+            transform: rotate(45deg);
+            background: #000;
+            z-index: 25;
+            border-left: 1px solid #fff;
+
+            
+        }
+
+        .h3-title {
+            margin-bottom: 15px !important;
+        }
+
+        p {
+            font-size: 22.514px;
+            font-weight: 400;
+            line-height: 33.771px;
+        }
+    }
+}
