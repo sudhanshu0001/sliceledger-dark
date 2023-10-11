@@ -1,0 +1,248 @@
+.withdraw_wrap {
+    .withdraw_official_wrap {
+        align-items: center;
+        border: 1px solid #fff;
+        display: flex;
+        margin-top: 30px;
+        padding: 15px;
+
+        .official_icn {
+            margin-right: 30px;
+
+            svg {
+                color: #D9C7E5;
+                font-size: 25px;
+            }
+        }
+
+        .official_text {
+            h3 {
+                color: #fff;
+                font-size: 16px;
+                font-weight: 600;
+                margin: 0 0 5px;
+                font-family: NekstRegular;
+
+            }
+
+            p {
+                color: #94A3B8;
+                font-size: 12px;
+                font-weight: 600;
+                margin: 0;
+            }
+        }
+    }
+
+    .from_area {
+        display: flex;
+        align-items: center;
+        margin: 30px 0px;
+
+        p {
+            margin: 0px;
+            color: #B7B7B7;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        h6 {
+            margin: 0px;
+            background: var(--secondary-color);
+            padding: 7px 12px;
+            font-weight: 600;
+            margin-left: 10px;
+            font-size: 14px;
+            font-family: NekstRegular;
+
+            img {
+                vertical-align: bottom;
+                width: 20px;
+            }
+        }
+    }
+
+    .input_area_wrap {
+        display: flex;
+
+        .input_area {
+            position: relative;
+            width: 100%;
+
+
+            svg {
+                position: absolute;
+                top: 50%;
+                left: 18px;
+                transform: translate(-50%, -50%);
+                font-size: 26px;
+
+            }
+
+            .form-control {
+                height: 55px;
+                background-color: #111827;
+                border-radius: 0px;
+                color: #fff;
+                font-size: 24px;
+                padding: 15px 35px 8px;
+                font-weight: 600;
+                font-family: NekstRegular;
+
+                &::placeholder {
+                    color: #fff;
+                }
+
+                &::-webkit-outer-spin-button,
+                &::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+
+                &[type=number] {
+                    -moz-appearance: textfield;
+                }
+
+                &:focus {
+                    box-shadow: none;
+                    border-color: #fff;
+                }
+            }
+        }
+
+        .input_select {
+            .form-select {
+                height: 55px;
+                background: url("../../../images/bridge/down.svg") #111827 no-repeat center right 10px;
+                background-size: 10px;
+                border: 1px solid #fff;
+                border-radius: 0px;
+                color: #fff;
+                padding: 15px 10px;
+                width: 80px;
+                font-weight: 600;
+                font-family: NekstRegular;
+
+                &:focus {
+                    box-shadow: none;
+                    border-color: #fff;
+                }
+            }
+        }
+    }
+
+    .to_area {
+        display: flex;
+        align-items: center;
+        margin: 30px 0px;
+
+        p {
+            margin: 0px;
+            color: #B7B7B7;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        h6 {
+            margin: 0px;
+            background: var(--secondary-color);
+            padding: 8px;
+            font-weight: 600;
+            margin-left: 10px;
+            font-size: 14px;
+            font-family: NekstRegular;
+
+            svg {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .receive_wrap {
+        background-color: #111827;
+        padding: 15px;
+        font-size: 20px;
+        color: #94A3B8;
+        font-weight: 600;
+        font-family: NekstRegular;
+
+        svg {
+            margin-right: 10px;
+            font-size: 30px;
+        }
+    }
+
+    .withdraw_btn_wrap {
+        margin: 20px 0px 0px;
+        position: relative;
+        overflow: hidden;
+
+        &::after {
+            position: absolute;
+            right: 0.8%;
+            content: "";
+            background: var(--secondary-color);
+            z-index: 3;
+            transform: rotate(45deg);
+            border-left: 2px solid #000;
+            bottom: -7px;
+            height: 27px;
+            width: 7px;
+            overflow: hidden;
+            border-radius: 0px 145px 78px 0px;
+        }
+
+
+        .withdraw_btn {
+
+            width: 100%;
+            background-color: var(--secondary-color);
+            border-radius: 0px 0px 24px 0px;
+            height: 50px;
+            color: var(--text-color);
+            position: relative;
+            overflow: hidden;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 24px;
+            font-family: NekstBold;
+
+            svg {
+                font-size: 24px;
+            }
+
+            &::before {
+                position: absolute;
+                bottom: -1px;
+                right: 14px;
+                content: "";
+                height: 27px;
+                width: 7px;
+                background: var(--secondary-color);
+                transform: rotate(45deg);
+                z-index: 2;
+                border-radius: 0px;
+                border-left: 2px solid #fff;
+            }
+
+            &::after {
+                border-radius: 0px 0px 24px 0px;
+                border: 2px solid var(--text-color);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                content: "";
+                width: 97%;
+                height: 85%;
+                transform: translate(-50%, -50%);
+            }
+
+        }
+    }
+
+    .wallet_bal {
+        color: #D2C4DB;
+        font-weight: 600;
+        font-size: 14px;
+    }
+}

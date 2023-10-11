@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/pages/landing/Home.jsx", "components/common/Grained.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/pages/landing/Home.jsx", "components/common/Grained.js", "src/app/bridge/withdraw/withdraw.jsx", "src/app/bridge/page.jsx", "src/app/bridge/account/withdraw.jsx", "src/app/bridge/account/page.jsx", "components/pages/bridge/TabMenu.jsx", "components/pages/bridge/AccountTabMenu.jsx"],
   "exclude": ["node_modules"]
 }

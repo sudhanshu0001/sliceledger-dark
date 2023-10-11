@@ -10,6 +10,9 @@
         background-color: transparent;
     }
 
+    .navbar-nav {
+        align-items: center;
+    }
 
     .head-social-icon {
         ul {
@@ -61,6 +64,117 @@
             top: 7px;
             position: relative;
         }
+    }
+
+    .connect_wallet_wrap {
+        margin-left: 10px;
+
+        .connect_wallet {
+            background: var(--secondary-color);
+            color: var(--text-color);
+            padding: 8px 15px;
+            font-weight: 600;
+            border-radius: 0px;
+            font-family: NekstRegular;
+
+        }
+
+        .header_btn {
+            img {
+                width: 20px;
+                height: 20px;
+                margin-right: 5px;
+            }
+        }
+
+        .dropdown {
+
+            .btn-success {
+                background: var(--secondary-color);
+                color: #3e3737;
+                border-radius: 0px;
+                font-weight: 600;
+                font-size: 14px;
+                border-color: var(--secondary-color);
+                padding: 10px 15px;
+                color: var(--text-color);
+                font-family: NekstRegular;
+
+                &::after {
+                    display: none;
+                }
+            }
+
+            .dropdown-menu {
+                left: -220px;
+                background-color: #06071B;
+                border: 1px solid #39424c;
+                border-radius: 12px;
+                width: 320px;
+                box-shadow: 0px 4px 16px -1px rgba(0, 0, 0, .08), 0px 0px 8px -4px rgba(0, 0, 0, .12);
+                overflow: hidden;
+                padding: 10px 15px;
+
+                .user_profile_wrap {
+                    margin-bottom: 15px;
+
+                    .user_profile {
+                        text-align: center;
+
+                        img {
+                            width: 80px;
+                            border-radius: 50%;
+                            height: 80px;
+                        }
+                    }
+
+                    h4 {
+                        font-size: 18px;
+                        text-align: center;
+                        color: #fff;
+
+                        .text_copied {
+                            font-size: 12px;
+                            background: #06071B;
+                            padding: 4px;
+                            border-radius: 5px;
+                            box-shadow: 0px 0px 10px 0px #3a3a3b;
+                            position: relative;
+                            top: -23px;
+                            left: -35px;
+                        }
+
+                        span {
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                .dropdown-item {
+                    padding: 6px 8px;
+                    color: #fff;
+
+                    &:hover {
+                        background-color: #D2C4DB;
+                    }
+
+                    svg {
+                        font-size: 20px;
+                        margin-right: 5px;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+
+        .disconnect_btn {
+            background: var(--secondary-color);
+            color: #000;
+            font-weight: 500;
+            font-size: 14px;
+            border-color: #D2C4DB;
+        }
+
     }
 }
 

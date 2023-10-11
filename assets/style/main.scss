@@ -1,5 +1,11 @@
 @import "./color_variable";
-
+@import "./pages/bridge/bridge";
+@import "./pages/bridge/deposit";
+@import "./pages/bridge/tabmenu";
+@import "./pages/bridge/withdraw";
+@import "./pages/bridge/account/accountTabmenu";
+@import "./pages/bridge/account/deposit";
+@import "./pages/bridge/account/withdraw";
 @font-face {
     font-family: SyneBold;
     src: url("../fonts/Syne/static/Syne-ExtraBold.ttf")

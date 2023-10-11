@@ -1,0 +1,35 @@
+.tabMenu_wrap {
+    ul {
+        padding: 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0px;
+        background-color: #111827;
+        gap: 5px;
+        li {
+            list-style: none;
+            width: 50%;
+            text-align: center;
+
+            &.active {
+                background: var(--secondary-color);
+              
+                a {
+                    color: #000;
+                    &:hover{
+                        color: #fff !important;
+                    }
+                }
+            }
+
+            a {
+                padding: 8px;
+                display: block;
+                font-weight: 900 !important;
+                font-family: NekstRegular;
+                text-decoration: none;
+            }
+        }
+    }
+}

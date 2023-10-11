@@ -45,6 +45,10 @@
         p {
             font-size: 18px;
             margin-bottom: 20px !important;
+
+            b {
+                font-family: NekstRegular;
+            }
         }
 
         .h3-title {
@@ -66,6 +70,7 @@
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         position: sticky;
         top: 50px;
+
         .h3-title {
             margin-bottom: 30px !important;
         }
@@ -76,12 +81,14 @@
             padding: 15px;
             border-radius: 10px;
             margin: 20px 0px;
-            img{
+
+            img {
                 margin-bottom: 20px;
-            border-radius: 10px;
+                border-radius: 10px;
 
             }
-            a{
+
+            a {
                 text-decoration: none;
                 color: #fff;
                 margin: 1em 0;

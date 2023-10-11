@@ -9,16 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@eth-optimism/sdk": "^3.1.4",
     "axios": "^1.5.1",
     "bootstrap": "^5.3.2",
     "next": "latest",
     "react": "latest",
     "react-bootstrap": "^2.9.0",
+    "react-copy-to-clipboard": "^5.1.0",
     "react-countup": "^6.4.2",
     "react-dom": "latest",
     "react-hook-form": "^7.47.0",
     "react-icons": "^4.11.0",
-    "sass": "^1.68.0"
+    "react-paginate": "^8.2.0",
+    "react-web3-icons": "^1.7.0",
+    "sass": "^1.68.0",
+    "viem": "^1.16.3",
+    "wagmi": "^1.4.3",
+    "web3": "1.8.1"
   },
   "devDependencies": {
     "@types/node": "latest",
