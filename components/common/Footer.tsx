@@ -8,12 +8,14 @@ import { BiLogoLinkedin, BiLogoFacebook, BiLogoTelegram } from "react-icons/bi"
 import { BsMedium } from "react-icons/bs"
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
+import SuccessModel from './SuccessModel';
 const Footer = () => {
   interface IInputs {
     name: string
     email: string
     subject: string
     massage: string
+
   }
   interface IFormFieldTyp {
     controlId: string
@@ -28,6 +30,7 @@ const Footer = () => {
   }
   const { register, reset, formState: { errors }, handleSubmit } = useForm<IInputs>()
   const [loader, setLoader] = useState<boolean>(false)
+  const [successModal, setSuccessModal] = useState<boolean>(false)
   const FormInput: IFormFieldTyp[] = [
     {
       id: '1',
@@ -100,9 +103,9 @@ const Footer = () => {
     }
   ]
 
-  const FormField = ({ controlId, type, placeholder, id, min, validateProp: { name, ...rest } }: IFormFieldTyp) => (
+  const FormField = ({ controlId, type, placeholder, id, validateProp: { name, ...rest } }: IFormFieldTyp) => (
     <Form.Group className="mb-3" controlId={controlId}>
-      <Form.Control type={type} as={type === "textarea" ? "textarea" : "input"} placeholder={placeholder} id={id} name={name} {...rest} min={min} onBlur={(e: React.FocusEvent<HTMLInputElement>) => e.target.blur()} />
+      <Form.Control type={type} as={type === "textarea" ? "textarea" : "input"} placeholder={placeholder} id={id} name={name} {...rest} onBlur={(e: React.FocusEvent<HTMLInputElement>) => e.target.blur()} />
       {errors[name as keyof IInputs]?.message && (
         <small className="text-danger">
           {errors[name as keyof IInputs]?.message}
@@ -121,15 +124,25 @@ const Footer = () => {
     }
     axios({
       method: "post",
-      url: "https://sliceledger.io/backend/api/equireMail",
+      url: "https://testrpc.sliceledger.io/backend/api/contactApi/",
       data: bodyFormData,
       headers: { "Content-Type": "multipart/form-data" },
     }).then(function (response) {
       reset();
       setLoader(false)
       console.log(response);
+      setSuccessModal(true)
+      document.body.style.overflow = "hidden"
+      setTimeout(() => {
+        document.body.style.overflow = "auto"
+        setSuccessModal(false)
 
-    }).catch((err) => { console.log(err) });
+      }, 3000);
+
+    }).catch((err) => {
+      console.log(err);
+      setLoader(false)
+    });
   }
 
   return (
@@ -164,17 +177,17 @@ const Footer = () => {
                 </div>
                 <div className='form-contact-links'>
                   <ul className='contact-links'>
-                    <li><Link href="/">Blog</Link></li>
+                    <li><Link href="/blog">Blog</Link></li>
                     <li><Link href="/">Whitepaper</Link></li>
-                    <li><Link href="/">Slice Wallet</Link></li>
-                    <li><Link href="/">Slice Extension</Link></li>
-                    <li><Link href="/">Privacy Policy</Link></li>
-                    <li><Link href="/">Terms & Conditions</Link></li>
+                    <li><Link href="/slice-wallet">Slice Wallet</Link></li>
+                    <li><Link href="/slice-extension">Slice Extension</Link></li>
+                    <li><Link href="/privacy-policy">Privacy Policy</Link></li>
+                    <li><Link href="/terms-and-conditions">Terms & Conditions</Link></li>
                   </ul>
                   <ul className='form-copy'>
-                    <li><Link href="/">Copyright©2023</Link></li>
-                    <li><Link href="/">All rights reserved</Link></li>
-                    <li><Link href="/">Sliceledger</Link></li>
+                    <li><p>Copyright©2023</p></li>
+                    <li><p>All rights reserved</p></li>
+                    <li><p>Sliceledger</p></li>
                   </ul>
                 </div>
                 <div className='form-social-links-wrap'>
@@ -194,7 +207,7 @@ const Footer = () => {
         </Container>
       </footer>
       <ToastContainer />
-
+      {successModal && <SuccessModel />}
     </>
   )
 }

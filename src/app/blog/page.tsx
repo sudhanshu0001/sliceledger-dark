@@ -8,6 +8,7 @@ import blog3 from "../../../assets/images/blog/blog3.png"
 import blog4 from "../../../assets/images/blog/blog4.png"
 import blog5 from "../../../assets/images/blog/blog5.jpg"
 import blog6 from "../../../assets/images/blog/blog6.png"
+import NewsLetter from '../../../components/pages/landing/NewsLetter'
 const page = () => {
     interface blogDataTyp {
         title: string
@@ -72,7 +73,7 @@ const page = () => {
                         {
                             blogData.map(({ title, description, slug, img }, id) => {
                                 return (
-                                    <Col sm={3} md={3} lg={3} xl={3} key={id}>
+                                    <Col sm={6} md={6} lg={6} xl={4} key={id}>
                                         <div className='blog-card'>
                                             <figure className='blog-card-img'>
                                                 <Image src={img.src} alt="Blog Image" fluid loading="lazy" />
@@ -90,6 +91,7 @@ const page = () => {
                     </Row>
                 </Container>
             </section>
+            <NewsLetter />
         </>
     )
 }

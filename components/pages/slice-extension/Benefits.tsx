@@ -7,7 +7,7 @@ const Benefits = () => {
             <section className='benefits-wrap'>
                 <Container fluid>
                     <div className='benefits-title'>
-                        <h3 className='h3-title'>The wonderful benefits that the Slice Wallet <br />Extension delivers</h3>
+                        <h3 className='h3-title'>The wonderful benefits that the Slice Wallet Extension delivers</h3>
                     </div>
                     <Row>
                         <Col sm={4} md={4} lg={4} xl={4}>

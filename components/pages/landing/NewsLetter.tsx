@@ -4,11 +4,14 @@ import { Container, Form } from 'react-bootstrap'
 import "../../../assets/style/pages/landing/_newsLetter.scss"
 import { useForm } from 'react-hook-form'
 import axios from 'axios'
+import SuccessModel from '../../common/SuccessModel'
 const NewsLetter = () => {
 
     // ================================= Newsletter ================================
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const [loader, setLoader] = useState<boolean>(false)
+    const [successModal, setSuccessModal] = useState<boolean>(false)
+
     const onSubmit = (data: any) => {
         setLoader(true)
         const bodyFormData = {
@@ -16,13 +19,24 @@ const NewsLetter = () => {
         }
         axios({
             method: "post",
-            url: "https://sliceledger.io/backend/api/emailSubscribe",
+            url: "https://testrpc.sliceledger.io/backend/api/subscriptionApi/",
             data: bodyFormData,
             headers: { "Content-Type": "multipart/form-data" },
         }).then(function (response) {
             reset();
             setLoader(false)
-        }).catch(((err) => { console.log(err) }));
+            setSuccessModal(true)
+            document.body.style.overflow = "hidden"
+            setTimeout(() => {
+                document.body.style.overflow = "auto"
+                setSuccessModal(false)
+
+            }, 3000);
+        }).catch(((err) => {
+            console.log(err)
+            setLoader(false)
+
+        }));
     }
     // ================================= Newsletter ================================
 
@@ -643,7 +657,7 @@ const NewsLetter = () => {
                             </div>
                             <Form onSubmit={handleSubmit(onSubmit)}>
                                 <div className='news-letter-input'>
-                                    <input type="email" placeholder='Enter your email' className='form-control'  aria-invalid={errors.mail ? "true" : "false"}  {...register("email", {
+                                    <input type="email" placeholder='Enter your email' className='form-control' aria-invalid={errors.mail ? "true" : "false"}  {...register("email", {
                                         required: 'Email is Required',
                                         pattern: {
                                             value: /[A-Za-z0-9]+@[A-Za-z0-9.-]+[A-Z|a-z]{2,}/ym,
@@ -654,12 +668,13 @@ const NewsLetter = () => {
                                         <button className='btn input-btn' type='submit'>Submit</button>
                                     </div>
                                 </div>
-                                    {errors.email?.message && (<p className='text-danger'>{errors.email.message}</p>)}
+                                {errors.email?.message && (<p className='text-danger'>{String(errors.email.message)}</p>)}
                             </Form>
                         </div>
                     </figure>
                 </Container>
             </section>
+            {successModal && <SuccessModel />}
         </>
     )
 }

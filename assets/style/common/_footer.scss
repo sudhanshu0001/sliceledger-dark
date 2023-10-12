@@ -110,15 +110,16 @@
                 display: inline-block;
                 padding: 10px;
 
-                a {
+                p {
                     font-family: NekstBold;
                     color: var(--text-color) !important;
                     text-decoration: none;
                     position: relative;
+                    font-size: 16px;
 
                 }
 
-                &:nth-child(2) a {
+                &:nth-child(2) p {
                     &::after {
                         position: absolute;
                         height: 100%;

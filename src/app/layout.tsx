@@ -12,8 +12,8 @@ import { goerli } from '@wagmi/core/chains';
 import { jsonRpcProvider } from 'wagmi/providers/jsonRpc';
 import { useState, useEffect } from 'react';
 import Script from 'next/script'
- // const [storState, setStorState] = useState()
- interface sliceType {
+// const [storState, setStorState] = useState()
+interface sliceType {
   id: number;
   name: string;
   network: string;
@@ -67,7 +67,7 @@ const { chains, publicClient } = configureChains(
       rpc: chain => ({ http: chain.rpcUrls.default.http[0] })
     })
   ]
-  )
+)
 // useEffect(() => {
 //   if (typeof window !== 'undefined') {
 //     setStorState(createStorage({ storage: window.localStorage }))
@@ -93,8 +93,8 @@ export default function ExampleClientComponent({
   children,
 }: {
   children: React.ReactNode
-}){
- 
+}) {
+
   return (
     <html lang="en">
       <body suppressHydrationWarning={true}>
@@ -104,7 +104,7 @@ export default function ExampleClientComponent({
           {children}
           <Footer />
         </WagmiConfig>
-        <Script src="/grained.js"></Script>
+        <Script src="/grained.js"/>
       </body>
     </html>
   )

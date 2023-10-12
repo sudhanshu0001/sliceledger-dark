@@ -13,34 +13,82 @@
     }
 
     .industries-card-wrap {
-        margin-bottom: 20px;
+
+        .row {
+            justify-content: space-around;
+        }
+
+        .industries-card-img {
+            margin-bottom: 150px;
+            &.bottom-industries{
+                margin-bottom: 0px;
+            }
+            img {
+                height: 350px;
+            }
+        }
 
         .industries-card {
-            height: 200px;
-            background-color: #fff;
-            border-radius: 5px;
+            border: 1px solid var(--text-color);
+            margin-bottom: 150px;
+            &.bottom-industries{
+                margin-bottom: 0px;
+            }
+            .industries-article {
+                padding: 15px;
+                height: 350px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-direction: column;
+
+                .h3-title {
+                    font-family: NekstMedium;
+                    font-size: 31.51px;
+                    font-weight: 500;
+                    line-height: 38.771px;
+                }
+            }
         }
     }
 }
+
 @media screen and (max-width:991px) {
-    .industries-wrap .industries-title .h2-title{
+    .industries-wrap .industries-title .h2-title {
         margin-bottom: 20px !important;
     }
-    .industries-wrap{
+
+    .industries-wrap {
         padding: 0px;
     }
 }
+@media screen and (max-width:767px) {
+    .industries-card-img img{
+        display: none;
+    }
+    .industries-card{
+        margin-bottom: 20px !important;
+    }
+    .industries-card-img{
+        margin-bottom: 0px !important;
+    }
+    .industries-wrap .industries-card-wrap .industries-card .industries-article{
+        height: 200px;
+    }
+}
 @media screen and (max-width:575px) {
-    .industries-wrap .industries-card-wrap .industries-card{
+    .industries-wrap .industries-card-wrap .industries-card {
         margin-bottom: 20px;
     }
-    .industries-wrap .industries-card-wrap{
+
+    .industries-wrap .industries-card-wrap {
         margin-bottom: 0px;
 
     }
 }
+
 @media screen and (max-width:400px) {
-    .industries-wrap .industries-title .h2-title{
+    .industries-wrap .industries-title .h2-title {
         font-size: 30px;
     }
 }

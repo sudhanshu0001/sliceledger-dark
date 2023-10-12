@@ -14,14 +14,15 @@
             tr {
                 td {
                     font-size: 12px;
+                    font-family: NekstRegular;
+
                 }
 
                 .withdraw_inner_btn {
-                    background: linear-gradient(90deg, #D2C4DB 0%, #D9C7E5 6.56%, #DFC9ED 13.32%, #E6CCF6 18.71%, #EECFFF 26.05%, #F8D3FF 32.16%, #FFD8FF 38.56%, #FFDEFF 45.69%, #FFE2FF 52.89%, #FFE9FF 61.69%, #FFEBFF 68.17%, #FFECFF 74.86%, #FFEBFF 80.24%, #FFE8FF 85.91%, #FFE5FF 90.93%, #FFE3FF 94.64%, #FFDFFF 100%), #B7B7B7;
+                    background:var(--secondary-color);
                     font-size: 12px;
                     padding: 1px 15px;
                     font-weight: 600;
-                    border-radius: 3px;
                     float: right;
                     min-width: 68px;
 
@@ -44,6 +45,8 @@
 
         th {
             background-color: #06071B;
+            font-family: NekstRegular;
+
         }
     }
 

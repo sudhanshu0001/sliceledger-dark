@@ -1,0 +1,40 @@
+.terms-and-conditions-wrap {
+    padding: 50px 0px;
+
+    .terms-and-conditions-title {
+
+        text-align: center;
+    }
+
+    .terms-and-conditions-article {
+        p {
+            font-size: 18px;
+            padding-bottom: 15px;
+        }
+
+        b {
+            // margin-bottom: 10px;
+            font-size: 18px;
+            display: block;
+            font-family: NekstRegular;
+
+        }
+        .h3-title{
+            text-align: center;
+            margin: 20px 0px !important;
+        }
+        ul, ol{
+            li{
+                font-size: 18px;
+                font-family: NekstRegular;
+                list-style: auto;
+                margin-bottom: 15px;
+            }
+        }
+        h4{
+            font-family: NekstRegular;  
+            font-size: 30px;
+            font-weight: 600;
+        }
+    }
+}

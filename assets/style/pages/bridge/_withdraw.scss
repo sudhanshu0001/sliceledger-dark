@@ -246,3 +246,13 @@
         font-size: 14px;
     }
 }
+
+@media screen and (max-width:360px) {
+    .withdraw_wrap .withdraw_btn_wrap .withdraw_btn {
+        font-size: 14px;
+    }
+
+    .withdraw_wrap .withdraw_btn_wrap .withdraw_btn::before {
+        right: 9px;
+    }
+}

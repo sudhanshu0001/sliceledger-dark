@@ -6,7 +6,6 @@
 */
 (function (window, doc) {
 
-    "use strict";
 
     function grained(ele, opt) {
 

@@ -30,9 +30,9 @@
   integrity sha512-Y4OZ+ytlatR8AI+8KZfKuL5urKp7qey08ha31L8b3BwewJAoJamTzyvxPR/5D+KkdJCGPq/+8TukHBlY10FX9A==
 
 "@babel/runtime@^7.17.2", "@babel/runtime@^7.20.7", "@babel/runtime@^7.21.0", "@babel/runtime@^7.22.5", "@babel/runtime@^7.22.6", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.8.7":
-  version "7.23.1"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.23.1.tgz#72741dc4d413338a91dcb044a86f3c0bc402646d"
-  integrity sha512-hC2v6p8ZSI/W0HUzh3V8C5g+NwSKzKPtJwSpTjwl0o297GP9+ZLQSkdvHz46CM3LqyoXxq+5G9komY+eSqSO0g==
+  version "7.23.2"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.23.2.tgz#062b0ac103261d68a966c4c7baf2ae3e62ec3885"
+  integrity sha512-mM8eg4yl5D6i3lu2QKPuPH4FArvJ8KhTofbE7jwMUv9KX5mBvwPAqnV3MlyBNqdp9RyRKP6Yck8TrfYrPvX3bg==
   dependencies:
     regenerator-runtime "^0.14.0"
 
@@ -1196,6 +1196,13 @@
   version "15.7.8"
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.8.tgz#805eae6e8f41bd19e88917d2ea200dc992f405d3"
   integrity sha512-kMpQpfZKSCBqltAJwskgePRaYRFukDkm1oItcAbC3gNELR20XIBcN9VRgg4+m8DKsTfkWeA4m4Imp4DDuWy7FQ==
+
+"@types/react-copy-to-clipboard@^5.0.5":
+  version "5.0.5"
+  resolved "https://registry.yarnpkg.com/@types/react-copy-to-clipboard/-/react-copy-to-clipboard-5.0.5.tgz#f61fbb76ad22f50101534ddb9b5d45c8dd5b4b80"
+  integrity sha512-en3JGqPA4RX4aUlo6q6uUbnqLp31Dhm2E/thiMvFTIvU+dUDG249jBG2MJ0rPMXE/MbKVrpmi/1r1G4QLhIHKQ==
+  dependencies:
+    "@types/react" "*"
 
 "@types/react-dom@latest":
   version "18.2.13"
@@ -5633,9 +5640,9 @@ safe-stable-stringify@^2.1.0:
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
 sass@^1.68.0:
-  version "1.69.2"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.69.2.tgz#8aeaeb6c1dcdbeaa26bbfeddece67c9fcd4b1d93"
-  integrity sha512-48lDtG/9OuSQZ9oNmJMUXI2QdCakAWrAGjpX/Fy6j4Og8dEAyE598x5GqCqnHkwV7+I5w8DJpqjm581q5HNh3w==
+  version "1.69.3"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.69.3.tgz#f8a0c488697e6419519834a13335e7b65a609c11"
+  integrity sha512-X99+a2iGdXkdWn1akFPs0ZmelUzyAQfvqYc2P/MPTrJRuIRoTffGzT9W9nFqG00S+c8hXzVmgxhUuHFdrwxkhQ==
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
     immutable "^4.0.0"
@@ -6337,9 +6344,9 @@ verror@1.10.0:
     extsprintf "^1.2.0"
 
 viem@^1.0.0, viem@^1.16.3:
-  version "1.16.3"
-  resolved "https://registry.yarnpkg.com/viem/-/viem-1.16.3.tgz#154e9a93bc5434d46fcae49ed0d6ec0a34f4d2c9"
-  integrity sha512-5IErEXuJVrSoMnEYidOh5lzPpTOZ/e33riDiZCxToap2DpLBMDpZCKoZZgroQgH7mAjfZcylv/LS+YIP/Gmeyg==
+  version "1.16.4"
+  resolved "https://registry.yarnpkg.com/viem/-/viem-1.16.4.tgz#4cb90dd27d13356ea00d21f6fd363bdfe0628c4e"
+  integrity sha512-T9ziN3EERXz0BtQSS2VJM+P1EJ2W7K7PviobFrmvWCEYmNQ/vJDhfFqGjvq0ZL9LVz9HvevCbenEy8oIdMEZ+w==
   dependencies:
     "@adraffy/ens-normalize" "1.9.4"
     "@noble/curves" "1.2.0"

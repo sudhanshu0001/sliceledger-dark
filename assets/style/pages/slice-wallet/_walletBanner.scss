@@ -113,6 +113,7 @@
 
 
                 .wallet-banner-btn-icn-text {
+                    
                     h6 {
                         color: #000;
                         font-family: NekstRegular;
@@ -180,6 +181,12 @@
     }
     .wallet-banner-wrap .bottom-line svg path{
         transform: scale(2);
+    }
+    .wallet-banner-wrap{
+        padding: 70px 0px 25px;
+    }
+    .wallet-banner-wrap .h3-title{
+        top: 50px;
     }
 }
 

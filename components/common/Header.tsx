@@ -61,11 +61,11 @@ const Header = () => {
                 <NavDropdown.Item as={Link} href="/slice-wallet"><AiOutlineArrowRight /> Slice Wallet</NavDropdown.Item>
                 <NavDropdown.Item as={Link} href="/slice-extension"><AiOutlineArrowRight /> Slice Extension</NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link as={Link} href="/bridge">Bridge</Nav.Link>
+              <Nav.Link as={Link} href="/bridge" className={`${pathName === "/bridge" || pathName === "/bridge/withdraw" || pathName === "/bridge/account" || pathName === "/bridge/account/withdraw" ? "active" : ""}`}>Bridge</Nav.Link>
               <Nav.Link as={Link} href="https://slicechain.gitbook.io/docs/" target='_blank'>Developers</Nav.Link>
-              <Nav.Link as={Link} href="/blog">Blog</Nav.Link>
+              <Nav.Link as={Link} href="/blog" className={`${pathName === "/blog" ? "active" : ""}`}>Blog</Nav.Link>
               {
-                pathName === "/bridge" || pathName === "/bridge/withdraw" || pathName === "/bridge/account/deposit/" || pathName === "/bridge/account/withdraw/" ?
+                pathName === "/bridge" || pathName === "/bridge/withdraw" || pathName === "/bridge/account" || pathName === "/bridge/account/withdraw" ?
                   <div className='connect_wallet_wrap' >
                     {
                       isClient ?
@@ -83,13 +83,13 @@ const Header = () => {
                                   placement="top"
                                   delay={{ show: 250, hide: 250 }}
                                   overlay={renderTooltip}>
-                                  <CopyToClipboard text={address}>
+                                  <CopyToClipboard text={address || ""}>
                                     <span className="d-inline-block"><MdContentCopy onClick={handleSourceCopy} /> </span>
                                   </CopyToClipboard>
                                 </OverlayTrigger>
                               </h4>
                             </div>
-                            <Dropdown.Item as={Link} href="/bridge/account/deposit"><AiOutlineDownload /> View Deposit</Dropdown.Item>
+                            <Dropdown.Item as={Link} href="/bridge/account"><AiOutlineDownload /> View Deposit</Dropdown.Item>
                             <Dropdown.Item as={Link} href="/bridge/account/withdraw"><AiOutlineUpload /> View Withdrawals</Dropdown.Item>
                             <Dropdown.Item onClick={() => handleDisconnect()}><BiPowerOff /> Disconnect</Dropdown.Item>
                           </Dropdown.Menu>

@@ -1,24 +1,8 @@
-"use client"
-import React, { useEffect } from 'react'
-
-const Data = () => {
-  useEffect(() => {
-    var options = {
-      animate: true,
-      patternWidth: 100,
-      patternHeight: 100,
-      grainOpacity: 0.1,
-      grainDensity: 1,
-      grainWidth: 1,
-      grainHeight: 1
-    };
-      grained('#wrapper', options);
-  }, [])
+import React from 'react'
+const Grained = () => {
   return (
-    <>
-        <div id="wrapper"></div>
-    </>
+    <div className="grained"></div>
   )
 }
 
-export default Data
+export default Grained

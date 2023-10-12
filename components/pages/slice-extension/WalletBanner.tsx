@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import "../../../assets/style/pages/slice-extension/_walletBanner.scss"
 import { Container, Row, Col, Image } from 'react-bootstrap';
@@ -22,16 +23,16 @@ const WalletBanner = () => {
               <article className='wallet-banner-article'>
                 <p>Sliceledger Wallet Extension is a free, client-side interface helping you interact with Sliceledger Chain. Our easy-to-use, open-source platform allows you to generate wallets and so much more.You can create a new wallet, import an existing wallet, vote for Master nodes, and transfer/receive SLICE Token.</p>
                 <div className='wallet-banner-btn-wrap'>
-                  <button type='button' className='btn wallet-banner-btn'>
+                  <button type='button' className='btn wallet-banner-btn' onClick={() => window.open("https://chrome.google.com/webstore/detail/slice/ngkboaddmfaodpbcmhnehklfbkpajbdp", '_ blank')}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="163" height="56" viewBox="0 0 163 56" fill="none">
                       <path d="M1 0H162.18V31.7L142.88 50H1V0Z" fill="#0052FF" />
                       <g filter="url(#filter0_d_184_4528)">
-                        <path d="M5.16016 4.60986H157.38V30.032L139.649 46.3999H5.16016V4.60986Z" stroke="white" stroke-width="2" shape-rendering="crispEdges" />
+                        <path d="M5.16016 4.60986H157.38V30.032L139.649 46.3999H5.16016V4.60986Z" stroke="white" strokeWidth="2" shapeRendering="crispEdges" />
                       </g>
                       <path d="M162 40.1099V34L146 50H152.202L161.989 40.1099H162Z" fill="#0052FF" />
                       <defs>
-                        <filter id="filter0_d_184_4528" x="0.160156" y="3.60986" width="162.22" height="51.79" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                        <filter id="filter0_d_184_4528" x="0.160156" y="3.60986" width="162.22" height="51.79" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                          <feFlood floodOpacity="0" result="BackgroundImageFix" />
                           <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                           <feOffset dy="4" />
                           <feGaussianBlur stdDeviation="2" />

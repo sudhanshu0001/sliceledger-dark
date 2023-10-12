@@ -208,3 +208,12 @@
         font-size: 14px;
     }
 }
+@media screen and (max-width:360px) {
+    .deposit_wrap .deposit_btn_wrap .bridge_btn {
+        font-size: 14px;
+    }
+
+    .deposit_wrap .deposit_btn_wrap .bridge_btn::before {
+        right: 9px;
+    }
+}
