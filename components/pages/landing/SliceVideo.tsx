@@ -31,7 +31,7 @@ const SliceVideo = () => {
                 centered show={show} onHide={handleClose} animation={true}>
                 <Modal.Body>
                     <div className='overview_video'>
-                        <iframe width="100%" height="700" src="https://www.youtube.com/embed/XouvjkroYas" title="Slice Ledger Blockchain Network - An Overview" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                        <iframe width="100%" height="700" src="https://www.youtube.com/embed/G3EIChDGjQU" title="Slice Ledger Blockchain Network - An Overview"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                     </div>
                 </Modal.Body>
             </Modal>
