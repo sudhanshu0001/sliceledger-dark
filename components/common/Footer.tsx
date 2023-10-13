@@ -14,7 +14,7 @@ const Footer = () => {
     name: string
     email: string
     subject: string
-    massage: string
+    message: string
 
   }
   interface IFormFieldTyp {
@@ -84,12 +84,12 @@ const Footer = () => {
     },
     {
       id: '4',
-      controlId: 'formGroupMassage',
+      controlId: 'formGroupMessage',
       type: 'textarea',
-      placeholder: 'Massage',
+      placeholder: 'Message',
       validateProp: {
-        ...register('massage', {
-          required: 'Massage is Required',
+        ...register('Message', {
+          required: 'Message is Required',
           minLength: {
             value: 3,
             message: 'Message must be at least 3 characters',
