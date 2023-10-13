@@ -178,7 +178,8 @@ const Footer = () => {
                 <div className='form-contact-links'>
                   <ul className='contact-links'>
                     <li><Link href="/blog">Blog</Link></li>
-                    <li><Link href="https://sliceledger.io/whitepaper" target='_blank' rel="noopener noreferrer">Whitepaper</Link></li>
+                    {/* <li><Link href="https://sliceledger.io/whitepaper" target='_blank' rel="noopener noreferrer">Whitepaper</Link></li> */}
+                    <li><Link href="/whitepaper.pdf" target='_blank' rel="noopener noreferrer">Whitepaper</Link></li>
                     <li><Link href="/slice-wallet">Slice Wallet</Link></li>
                     <li><Link href="/slice-extension">Slice Extension</Link></li>
                     <li><Link href="/privacy-policy">Privacy Policy</Link></li>
