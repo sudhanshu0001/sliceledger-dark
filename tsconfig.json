@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -19,9 +23,27 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/pages/landing/Home.jsx", "components/common/Grained.js", "src/app/bridge/withdraw/withdraw.jsx", "src/app/bridge/page.jsx", "src/app/bridge/account/withdraw/page.jsx", "src/app/bridge/account/page.jsx", "components/pages/bridge/TabMenu.jsx", "components/pages/bridge/AccountTabMenu.jsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "components/pages/landing/Home.jsx",
+    "components/common/Grained.js",
+    "src/app/bridge/withdraw/withdraw.jsx",
+    "src/app/bridge/page.jsx",
+    "src/app/bridge/account/withdraw/page.jsx",
+    "src/app/bridge/account/page.jsx",
+    "components/pages/bridge/TabMenu.jsx",
+    "components/pages/bridge/AccountTabMenu.jsx",
+    "build/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

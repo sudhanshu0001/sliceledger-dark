@@ -1,6 +1,7 @@
 "use client"
 import "../../assets/style/main.scss"
-import type { Metadata } from 'next'
+// import type { Metadata } from 'next'
+// import { Metadata } from 'next'
 import Header from '../../components/common/Header'
 import Footer from '../../components/common/Footer'
 import "bootstrap/dist/css/bootstrap.min.css"
@@ -12,6 +13,7 @@ import { goerli } from '@wagmi/core/chains';
 import { jsonRpcProvider } from 'wagmi/providers/jsonRpc';
 import { useState, useEffect } from 'react';
 import Script from 'next/script'
+import { metadata } from "./metadata"
 // const [storState, setStorState] = useState()
 interface sliceType {
   id: number;
@@ -89,6 +91,7 @@ const config = createConfig({
   publicClient,
 })
 // --------------------------------- WAGMIN ---------------------------------
+
 export default function ExampleClientComponent({
   children,
 }: {
@@ -97,6 +100,9 @@ export default function ExampleClientComponent({
 
   return (
     <html lang="en">
+      <head>
+        <title>{metadata.title}</title>
+      </head>
       <body suppressHydrationWarning={true}>
         <WagmiConfig config={config}>
           <Grained />
@@ -104,7 +110,7 @@ export default function ExampleClientComponent({
           {children}
           <Footer />
         </WagmiConfig>
-        <Script src="/grained.js"/>
+        <Script src="/grained.js" />
       </body>
     </html>
   )
