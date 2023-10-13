@@ -277,7 +277,7 @@ const Page = () => {
             <div className='to_area'>
               <p>To</p>
               {/* <h6><Image src={sliceLogo.src} alt="Slice" loading='lazy' /> SLICE</h6> */}
-              <h6>SLICE</h6>
+              <h6>SLICE Testnet</h6>
             </div>
             <div className='receive_wrap'>
               {sendToken == "ETH" ? <Ethereum /> : sendToken == "DAI" ? <Dai /> : sendToken == "USDT" ? <Usdt /> : <Usdc />}  receive: {ethValue ? ethValue : "0"} {sendToken}

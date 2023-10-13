@@ -26,7 +26,7 @@ const Counter = () => {
                             <div className='counter-inner-wrap'>
                                 <h6 className='h6-title'>Block Time</h6>
                                 <div className='counter-number'>
-                                    <CountUp start={0} end={1.5} decimals={1} decimal="." />
+                                    <CountUp start={0} end={2} decimals={1} decimal="." />
                                 </div>
                                 <div className='counter-shape'>
                                     <span></span>
@@ -39,7 +39,7 @@ const Counter = () => {
                             <div className='counter-inner-wrap'>
                                 <h6 className='h6-title'>Block Size</h6>
                                 <div className='counter-number'>
-                                    <CountUp start={0} end={620} decimals={0} decimal="." />
+                                    <CountUp start={0} end={1700} decimals={0} decimal="." />
                                 </div>
                                 <div className='counter-shape'>
                                     <span></span>
