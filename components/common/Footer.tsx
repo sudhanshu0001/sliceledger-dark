@@ -61,7 +61,7 @@ const Footer = () => {
         ...register('email', {
           required: 'Email is Required',
           pattern: {
-            value: /[A-Za-z0-9]+@[A-Za-z0-9.-]+[A-Z|a-z]{2,}/ym,
+            value: /[A-Za-z0-9]+@[A-Za-z0-9.-]+[A-Z|a-z]{2,}/,
             message: "Invalid Email Address"
           },
         })
@@ -88,7 +88,7 @@ const Footer = () => {
       type: 'textarea',
       placeholder: 'Message',
       validateProp: {
-        ...register('Message', {
+        ...register('message', {
           required: 'Message is Required',
           minLength: {
             value: 3,
@@ -178,7 +178,7 @@ const Footer = () => {
                 <div className='form-contact-links'>
                   <ul className='contact-links'>
                     <li><Link href="/blog">Blog</Link></li>
-                    <li><Link href="/">Whitepaper</Link></li>
+                    <li><Link href="https://sliceledger.io/whitepaper" target='_blank' rel="noopener noreferrer">Whitepaper</Link></li>
                     <li><Link href="/slice-wallet">Slice Wallet</Link></li>
                     <li><Link href="/slice-extension">Slice Extension</Link></li>
                     <li><Link href="/privacy-policy">Privacy Policy</Link></li>

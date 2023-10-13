@@ -112,7 +112,7 @@ p {
 
 p {
     color: var(--text-color);
-    font-family: NekstRegular;
+    font-family: NekstRegular;  
     font-size: 14px;
     line-height: 26px;
     font-weight: 400;
@@ -200,7 +200,7 @@ a,
 }
 
 .grained {
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Dissolve_Noise_Texture.png");
+    background-image: url("../images/grains.png");
     height: 300%;
     width: 300%;
     position: fixed;
