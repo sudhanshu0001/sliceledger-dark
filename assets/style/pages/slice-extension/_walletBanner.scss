@@ -6,7 +6,6 @@
     background-position: center;
     margin-top: -73px;
     position: relative;
-    // border-bottom: 1px solid var(--text-color);
 
     &::after {
         position: absolute;
@@ -18,56 +17,22 @@
         content: "";
     }
 
-    // &::before {
-    //     position: absolute;
-    //     bottom: -2px;
-    //     right: 0px;
-    //     width: 79%;
-    //     height: 2px;
-    //     background: #000;
-    //     content: "";
-    //     height: 35px;
-    // }
 
     .h3-title {
         position: relative;
         z-index: 1;
     }
-    .bottom-line{
+
+    .bottom-line {
         position: relative;
         top: 25px;
-        svg{
+
+        svg {
             transform: scale(1);
             width: 100%;
         }
     }
-    // .bottom-line {
-    //     border-bottom: 1px solid #fff;
-    //     position: relative;
-    //     top: -8px;
 
-    //     &::after {
-    //         position: absolute;
-    //         width: 23%;
-    //         height: 1px;
-    //         background-color: #000;
-    //         content: "";
-    //         left: 0px;
-    //         top: 0px;
-    //     }
-
-    //     &::before {
-    //         position: absolute;
-    //         width: 1px;
-    //         height: 49px;
-    //         background: #fff;
-    //         content: "";
-    //         left: 22%;
-    //         top: -7px;
-    //         transform: rotate(46deg);
-    //         z-index: 26;
-    //     }
-    // }
 }
 
 .wallet-banner-article-wrap {
@@ -150,11 +115,13 @@
         padding: 50px 0px;
     }
 }
+
 @media screen and (max-width:991px) {
-    .wallet-banner-wrap .bottom-line svg{
+    .wallet-banner-wrap .bottom-line svg {
         stroke-width: 4px;
     }
 }
+
 @media screen and (max-width:767px) {
     .wallet-banner-wrap::before {
         width: 55%;
@@ -176,17 +143,21 @@
     .wallet-banner-article-wrap {
         padding: 20px 0px;
     }
+
     .wallet-banner-article-wrap .wallet-banner-article p {
         font-size: 24px;
         line-height: 35px;
     }
-    .wallet-banner-wrap .bottom-line svg path{
+
+    .wallet-banner-wrap .bottom-line svg path {
         transform: scale(2);
     }
-    .wallet-banner-wrap{
+
+    .wallet-banner-wrap {
         padding: 70px 0px 25px;
     }
-    .wallet-banner-wrap .h3-title{
+
+    .wallet-banner-wrap .h3-title {
         top: 50px;
     }
 }

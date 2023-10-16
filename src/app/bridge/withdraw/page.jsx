@@ -2,20 +2,12 @@
 import React, { useState, useEffect } from 'react'
 import { Ethereum, Usdc, Usdt, Dai } from 'react-web3-icons';
 import { Form, Image, Spinner } from "react-bootstrap"
-// import sliceLogo from "../../public/images/bridge/sliceIcn.png"
-// import { FaWallet } from "react-icons/fa"
-// import { MdSecurity } from "react-icons/md"
-// import { MdSecurity } from "@react-icons/all-files/md/MdSecurity"
 import  verified from "../../../../assets/images/icons/verified.png"
 import TabMenu from '../../../../components/pages/bridge/TabMenu';
 import { useAccount, useConnect, useNetwork, useSwitchNetwork, useBalance } from 'wagmi'
 import { InjectedConnector } from 'wagmi/connectors/injected';
-// import { IoMdWallet } from "react-icons/io"
-// import { IoMdWallet } from "@react-icons/all-files/io/IoMdWallet"
 import wallet from "../../../../assets/images/icons/wallet.png"
 import swap from "../../../../assets/images/icons/swap.png"
-// import { HiSwitchHorizontal } from "react-icons/hi";
-// import { HiSwitchHorizontal } from "@react-icons/all-files/hi/HiSwitchHorizontal";
 const optimismSDK = require("@eth-optimism/sdk")
 const ethers = require("ethers")
 const Withdraw = () => {
@@ -48,7 +40,6 @@ const Withdraw = () => {
   })
   const [metaMastError, setMetaMaskError] = useState("")
   const { error, isLoading, pendingChainId, switchNetwork } = useSwitchNetwork({
-    // throwForSwitchChainNotSupported: true,
     chainId: 90001,
     onError(error) {
       console.log('Error', error)

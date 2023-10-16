@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { Tooltip, OverlayTrigger, Image } from 'react-bootstrap'
-// import { MdContentCopy } from "react-icons/md"
-// import { MdContentCopy } from "@react-icons/all-files/md/MdContentCopy"
 import copy from "../../../assets/images/icons/copy.png"
 import Link from 'next/link';
 import { usePathname } from 'next/navigation'

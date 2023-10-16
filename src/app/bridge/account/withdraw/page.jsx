@@ -131,9 +131,6 @@ const Withdraw = () => {
                 setLoader(NaN)
             }
         } catch (error) {
-            // if(error.code === -32603){
-            //     console.log("Already claim");
-            // }
             if (error.code === "ACTION_REJECTED") {
                 setLoader(NaN)
             }

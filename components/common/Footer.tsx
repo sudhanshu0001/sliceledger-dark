@@ -3,18 +3,6 @@ import React, { useState } from 'react'
 import "../../assets/style/common/_footer.scss"
 import { Container, Col, Row, Form, Spinner, ToastContainer, Image } from "react-bootstrap"
 import Link from 'next/link';
-// import { AiFillGithub, AiOutlineTwitter, AiOutlineInstagram } from "react-icons/ai"
-// import UilGithub from '@iconscout/react-unicons/icons/UilGithub'
-// import { UilTwitter } from '@iconscout/react-unicons'
-// import { AiFillGithub } from "@react-icons/all-files/ai/AiFillGithub"
-// import { AiOutlineTwitter } from "@react-icons/all-files/ai/AiOutlineTwitter"
-// import { AiOutlineInstagram } from "@react-icons/all-files/ai/AiOutlineInstagram"
-// import { BiLogoLinkedin, BiLogoFacebook, BiLogoTelegram } from "react-icons/bi"
-// import { BiLogoLinkedin } from "@react-icons/all-files/bi/BiLogoLinkedin"
-// import { BiLogoFacebook } from "@react-icons/all-files/bi/BiLogoFacebook"
-// import { BiLogoTelegram } from "@react-icons/all-files/bi/BiLogoTelegram"
-// import { BsMedium } from "react-icons/bs"
-// import { BsMedium } from "@react-icons/all-files/bs/BsMedium"
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import SuccessModel from './SuccessModel';
@@ -146,7 +134,6 @@ const Footer = () => {
     }).then(function (response) {
       reset();
       setLoader(false)
-      console.log(response);
       setSuccessModal(true)
       document.body.style.overflow = "hidden"
       setTimeout(() => {
@@ -194,7 +181,6 @@ const Footer = () => {
                 <div className='form-contact-links'>
                   <ul className='contact-links'>
                     <li><Link href="/blog">Blog</Link></li>
-                    {/* <li><Link href="https://sliceledger.io/whitepaper" target='_blank' rel="noopener noreferrer">Whitepaper</Link></li> */}
                     <li><Link href="/whitepaper.pdf" target='_blank' rel="noopener noreferrer">Whitepaper</Link></li>
                     <li><Link href="/slice-wallet">Slice Wallet</Link></li>
                     <li><Link href="/slice-extension">Slice Extension</Link></li>
@@ -208,15 +194,6 @@ const Footer = () => {
                   </ul>
                 </div>
                 <div className='form-social-links-wrap'>
-                  {/* <ul>
-                    <li><Link href="https://github.com/sliceledger-blockchain" className='form-social-links' target='_blank' rel="noopener noreferrer"><AiFillGithub /></Link></li>
-                    <li><Link href="https://medium.com/@Slice_Ledger" className='form-social-links' target='_blank' rel="noopener noreferrer"><BsMedium /></Link></li>
-                    <li><Link href="https://t.me/sliceledger" className='form-social-links' target='_blank' rel="noopener noreferrer"><BiLogoTelegram /></Link></li>
-                    <li><Link href="https://www.facebook.com/SliceLedger" className='form-social-links' target='_blank' rel="noopener noreferrer"><BiLogoFacebook /></Link></li>
-                    <li><Link href="https://twitter.com/LedgerSlice" className='form-social-links' target='_blank' rel="noopener noreferrer"><AiOutlineTwitter /></Link></li>
-                    <li><Link href="https://www.instagram.com/slice.ledger/" className='form-social-links' target='_blank' rel="noopener noreferrer"><AiOutlineInstagram /></Link></li>
-                    <li><Link href="https://www.linkedin.com/company/slice-ledger" className='form-social-links' target='_blank' rel="noopener noreferrer"><BiLogoLinkedin /></Link></li>
-                  </ul> */}
                   <ul>
                     <li><Link href="https://github.com/sliceledger-blockchain" className='form-social-links' target='_blank' rel="noopener noreferrer"><Image src={github.src} alt="icon" fluid loading="lazy" /></Link></li>
                     <li><Link href="https://medium.com/@Slice_Ledger" className='form-social-links' target='_blank' rel="noopener noreferrer"><Image src={medium.src} alt="icon" fluid loading="lazy" /></Link></li>

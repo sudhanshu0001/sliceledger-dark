@@ -26,7 +26,6 @@ const Page = () => {
             OptimismPortal: process.env.NEXT_PUBLIC_OPTIMISM_PORTAL_PROXY,
             L2OutputOracle: process.env.NEXT_PUBLIC_L2_OUTPUTORACLE_PROXY,
         }
-        // console.log(l1Contracts);
         const bridges = {
             Standard: {
                 l1Bridge: l1Contracts.L1StandardBridge,
@@ -56,7 +55,6 @@ const Page = () => {
             data[index].timestamp = timestamp
         }
         setDepositDetails(data)
-        // console.log("data", data);
     }
     function timeConverter(timestamp) {
         var a = new Date(timestamp * 1000);

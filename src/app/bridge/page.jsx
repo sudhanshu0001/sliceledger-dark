@@ -2,16 +2,11 @@
 import React, { useEffect, useState } from 'react'
 import { Ethereum, Dai, Usdt, Usdc } from 'react-web3-icons';
 import { Form, Image, Spinner } from "react-bootstrap"
-// import sliceLogo from "../../public/images/bridge/sliceIcn.png"
-// import { FaWallet } from "react-icons/fa"
-// import { FaWallet } from "@react-icons/all-files/fa/FaWallet"
 import wallet from "../../../assets/images/icons/wallet.png"
 import swap from "../../../assets/images/icons/swap.png"
 import TabMenu from '../../../components/pages/bridge/TabMenu';
 import { useAccount, useConnect, useNetwork, useSwitchNetwork, useBalance, useToken } from 'wagmi';
-import { InjectedConnector } from 'wagmi/connectors/injected';
-// import { HiSwitchHorizontal } from "react-icons/hi";
-// import { HiSwitchHorizontal } from "@react-icons/all-files/hi/HiSwitchHorizontal";
+import { InjectedConnector } from 'wagmi/connectors/injected';;
 import Web3 from 'web3';
 const optimismSDK = require("@eth-optimism/sdk")
 const ethers = require("ethers")
@@ -119,7 +114,6 @@ const Page = () => {
           })
           if (sendToken === "ETH") {
             if (Number(data?.formatted) > Number(ethValue)) {
-              console.log(sendToken);
               const weiValue = parseInt(ethers.utils.parseEther(ethValue)._hex, 16)
               setLoader(true);
               var depositETHEREUM = await crossChainMessenger.depositETH(weiValue.toString())
@@ -140,7 +134,6 @@ const Page = () => {
               var receiptDAI = await crossChainMessenger.depositERC20("0xb93cba7013f4557cDFB590fD152d24Ef4063485f", "0x7c6b91D9Be155A6Db01f749217d76fF02A7227F2", daiValue)
               var getReceiptDAI = await receiptDAI.wait()
               if (getReceiptDAI) {
-                console.log("getReceiptDAI", getReceiptDAI);
                 setLoader(false);
                 setEthValue("")
               }
@@ -155,7 +148,6 @@ const Page = () => {
               var receiptUSDT = await crossChainMessenger.depositERC20("0xfad6367E97217cC51b4cd838Cc086831f81d38C2", "0x271583ba9e3D866E49A9736c626772e944dD9f2A", usdtValue)
               var getReceiptUSDT = await receiptUSDT.wait()
               if (getReceiptUSDT) {
-                console.log("getReceiptUSDT", getReceiptUSDT);
                 setLoader(false);
                 setEthValue("")
               }
@@ -170,7 +162,6 @@ const Page = () => {
               var receiptUSDC = await crossChainMessenger.depositERC20("0x07865c6E87B9F70255377e024ace6630C1Eaa37F", "0x11FED897ED37C4F526ECe58dEe0F2a54D8F36e04", usdcValue)
               var getReceiptUSDC = await receiptUSDC.wait()
               if (getReceiptUSDC) {
-                console.log("getReceiptUSDC", getReceiptUSDC);
                 setLoader(false);
                 setEthValue("")
               }
@@ -185,7 +176,6 @@ const Page = () => {
   }
 
   const handleChange = (e) => {
-    console.log("data", typeof e.target.value);
     if (sendToken == 'ETH') {
       if (Number(data?.formatted) < Number(e.target.value)) {
         setErrorInput("Insufficient ETH balance.")
@@ -229,7 +219,6 @@ const Page = () => {
     }
   }, [isConnected, dataUSDT, dataDAI, dataUSDC, data, sendToken])
   useEffect(() => {
-    console.log("Number(data?.formatted).toFixed(5)", Number(data?.formatted).toFixed(5));
   }, [isConnected, dataUSDT, dataDAI, dataUSDC, data, sendToken])
 
   const getFormattedBalance = (token) => {

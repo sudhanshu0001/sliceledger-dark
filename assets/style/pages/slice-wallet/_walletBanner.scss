@@ -6,7 +6,6 @@
     background-position: center;
     margin-top: -73px;
     position: relative;
-    // border-bottom: 1px solid var(--text-color);
 
     &::after {
         position: absolute;
@@ -17,17 +16,6 @@
         background: linear-gradient(to top, transparent, #000);
         content: "";
     }
-
-    // &::before {
-    //     position: absolute;
-    //     bottom: -2px;
-    //     right: 0px;
-    //     width: 79%;
-    //     height: 2px;
-    //     background: #000;
-    //     content: "";
-    //     height: 35px;
-    // }
 
     .h3-title {
         position: relative;
@@ -41,33 +29,6 @@
             width: 100%;
         }
     }
-    // .bottom-line {
-    //     border-bottom: 1px solid #fff;
-    //     position: relative;
-    //     top: -8px;
-
-    //     &::after {
-    //         position: absolute;
-    //         width: 23%;
-    //         height: 1px;
-    //         background-color: #000;
-    //         content: "";
-    //         left: 0px;
-    //         top: 0px;
-    //     }
-
-    //     &::before {
-    //         position: absolute;
-    //         width: 1px;
-    //         height: 49px;
-    //         background: #fff;
-    //         content: "";
-    //         left: 22%;
-    //         top: -7px;
-    //         transform: rotate(46deg);
-    //         z-index: 26;
-    //     }
-    // }
 }
 
 .wallet-banner-article-wrap {

@@ -4,21 +4,12 @@ import React, { useEffect, useState } from 'react'
 import { Navbar, Container, Nav, Image, NavDropdown, Dropdown, OverlayTrigger, Tooltip } from "react-bootstrap";
 import Logo from "../../assets/images/logo.png";
 import "../../assets/style/common/_header.scss";
-// import { AiOutlineArrowRight } from 'react-icons/ai';
-// import { AiOutlineArrowRight } from '@react-icons/all-files/ai/AiOutlineArrowRight';
 import rightIcon from "../../assets/images/icons/rightArrow.png"
 import upload from "../../assets/images/icons/upload.png"
 import download from "../../assets/images/icons/download.png"
 import power from "../../assets/images/icons/power-off.png"
 import copy from "../../assets/images/icons/copy.png"
 import { usePathname } from 'next/navigation';
-// import { MdContentCopy } from "react-icons/md"
-// import { MdContentCopy } from "@react-icons/all-files/md/MdContentCopy"
-// import { AiOutlineDownload, AiOutlineUpload } from "react-icons/ai";
-// import { AiOutlineDownload } from "@react-icons/all-files/ai/AiOutlineDownload";
-// import { AiOutlineUpload } from "@react-icons/all-files/ai/AiOutlineUpload";
-// import { BiPowerOff } from "react-icons/bi"
-// import { BiPowerOff } from "@react-icons/all-files/bi/BiPowerOff"
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { useAccount, useConnect, useEnsName } from 'wagmi';
 import { disconnect } from '@wagmi/core'
@@ -68,8 +59,6 @@ const Header = () => {
           <Navbar.Collapse id="navbarScroll">
             <Nav className="ms-auto">
               <NavDropdown title="Wallet" id="wallet-dropdown">
-                {/* <NavDropdown.Item as={Link} href="/slice-wallet"><AiOutlineArrowRight /> Slice Wallet</NavDropdown.Item>
-                <NavDropdown.Item as={Link} href="/slice-extension"><AiOutlineArrowRight /> Slice Extension</NavDropdown.Item> */}
                 <NavDropdown.Item as={Link} href="/slice-wallet"><Image src={rightIcon.src} alt='Right Icon' fluid loading='lazy' /> Slice Wallet</NavDropdown.Item>
                 <NavDropdown.Item as={Link} href="/slice-extension"><Image src={rightIcon.src} alt='Right Icon' fluid loading='lazy' /> Slice Extension</NavDropdown.Item>
               </NavDropdown>
