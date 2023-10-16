@@ -4,11 +4,16 @@ import React, { useEffect, useState } from 'react'
 import { Navbar, Container, Nav, Image, NavDropdown, Dropdown, OverlayTrigger, Tooltip } from "react-bootstrap";
 import Logo from "../../assets/images/logo.png";
 import "../../assets/style/common/_header.scss";
-import { AiOutlineArrowRight } from 'react-icons/ai';
+// import { AiOutlineArrowRight } from 'react-icons/ai';
+import { AiOutlineArrowRight } from '@react-icons/all-files/ai/AiOutlineArrowRight';
 import { usePathname } from 'next/navigation';
-import { MdContentCopy } from "react-icons/md"
-import { AiOutlineDownload, AiOutlineUpload } from "react-icons/ai";
-import { BiPowerOff } from "react-icons/bi"
+// import { MdContentCopy } from "react-icons/md"
+import { MdContentCopy } from "@react-icons/all-files/md/MdContentCopy"
+// import { AiOutlineDownload, AiOutlineUpload } from "react-icons/ai";
+import { AiOutlineDownload } from "@react-icons/all-files/ai/AiOutlineDownload";
+import { AiOutlineUpload } from "@react-icons/all-files/ai/AiOutlineUpload";
+// import { BiPowerOff } from "react-icons/bi"
+import { BiPowerOff } from "@react-icons/all-files/bi/BiPowerOff"
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { useAccount, useConnect, useEnsName } from 'wagmi';
 import { disconnect } from '@wagmi/core'

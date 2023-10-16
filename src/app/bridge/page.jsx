@@ -3,11 +3,13 @@ import React, { useEffect, useState } from 'react'
 import { Ethereum, Dai, Usdt, Usdc } from 'react-web3-icons';
 import { Form, Image, Spinner } from "react-bootstrap"
 // import sliceLogo from "../../public/images/bridge/sliceIcn.png"
-import { FaWallet } from "react-icons/fa"
+// import { FaWallet } from "react-icons/fa"
+import { FaWallet } from "@react-icons/all-files/fa/FaWallet"
 import TabMenu from '../../../components/pages/bridge/TabMenu';
 import { useAccount, useConnect, useNetwork, useSwitchNetwork, useBalance, useToken } from 'wagmi';
 import { InjectedConnector } from 'wagmi/connectors/injected';
-import { HiSwitchHorizontal } from "react-icons/hi";
+// import { HiSwitchHorizontal } from "react-icons/hi";
+import { HiSwitchHorizontal } from "@react-icons/all-files/hi/HiSwitchHorizontal";
 import Web3 from 'web3';
 const optimismSDK = require("@eth-optimism/sdk")
 const ethers = require("ethers")

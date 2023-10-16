@@ -3,9 +3,16 @@ import React, { useState } from 'react'
 import "../../assets/style/common/_footer.scss"
 import { Container, Col, Row, Form, Spinner, ToastContainer } from "react-bootstrap"
 import Link from 'next/link';
-import { AiFillGithub, AiOutlineTwitter, AiOutlineInstagram } from "react-icons/ai"
-import { BiLogoLinkedin, BiLogoFacebook, BiLogoTelegram } from "react-icons/bi"
-import { BsMedium } from "react-icons/bs"
+// import { AiFillGithub, AiOutlineTwitter, AiOutlineInstagram } from "react-icons/ai"
+import { AiFillGithub } from "@react-icons/all-files/ai/AiFillGithub"
+import { AiOutlineTwitter } from "@react-icons/all-files/ai/AiOutlineTwitter"
+import { AiOutlineInstagram } from "@react-icons/all-files/ai/AiOutlineInstagram"
+// import { BiLogoLinkedin, BiLogoFacebook, BiLogoTelegram } from "react-icons/bi"
+// import { BiLogoLinkedin } from "@react-icons/all-files/bi/BiLogoLinkedin"
+// import { BiLogoFacebook } from "@react-icons/all-files/bi/BiLogoFacebook"
+// import { BiLogoTelegram } from "@react-icons/all-files/bi/BiLogoTelegram"
+// import { BsMedium } from "react-icons/bs"
+// import { BsMedium } from "@react-icons/all-files/bs/BsMedium"
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import SuccessModel from './SuccessModel';
@@ -194,12 +201,16 @@ const Footer = () => {
                 <div className='form-social-links-wrap'>
                   <ul>
                     <li><Link href="https://github.com/sliceledger-blockchain" className='form-social-links' target='_blank' rel="noopener noreferrer"><AiFillGithub /></Link></li>
-                    <li><Link href="https://medium.com/@Slice_Ledger" className='form-social-links' target='_blank' rel="noopener noreferrer"><BsMedium /></Link></li>
-                    <li><Link href="https://t.me/sliceledger" className='form-social-links' target='_blank' rel="noopener noreferrer"><BiLogoTelegram /></Link></li>
-                    <li><Link href="https://www.facebook.com/SliceLedger" className='form-social-links' target='_blank' rel="noopener noreferrer"><BiLogoFacebook /></Link></li>
+                    <li><Link href="https://medium.com/@Slice_Ledger" className='form-social-links' target='_blank' rel="noopener noreferrer">M</Link></li>
+                    {/* <li><Link href="https://medium.com/@Slice_Ledger" className='form-social-links' target='_blank' rel="noopener noreferrer"><BsMedium /></Link></li> */}
+                    <li><Link href="https://t.me/sliceledger" className='form-social-links' target='_blank' rel="noopener noreferrer">T</Link></li>
+                    {/* <li><Link href="https://t.me/sliceledger" className='form-social-links' target='_blank' rel="noopener noreferrer"><BiLogoTelegram /></Link></li> */}
+                    <li><Link href="https://www.facebook.com/SliceLedger" className='form-social-links' target='_blank' rel="noopener noreferrer">F</Link></li>
+                    {/* <li><Link href="https://www.facebook.com/SliceLedger" className='form-social-links' target='_blank' rel="noopener noreferrer"><BiLogoFacebook /></Link></li> */}
                     <li><Link href="https://twitter.com/LedgerSlice" className='form-social-links' target='_blank' rel="noopener noreferrer"><AiOutlineTwitter /></Link></li>
                     <li><Link href="https://www.instagram.com/slice.ledger/" className='form-social-links' target='_blank' rel="noopener noreferrer"><AiOutlineInstagram /></Link></li>
-                    <li><Link href="https://www.linkedin.com/company/slice-ledger" className='form-social-links' target='_blank' rel="noopener noreferrer"><BiLogoLinkedin /></Link></li>
+                    <li><Link href="https://www.linkedin.com/company/slice-ledger" className='form-social-links' target='_blank' rel="noopener noreferrer">L</Link></li>
+                    {/* <li><Link href="https://www.linkedin.com/company/slice-ledger" className='form-social-links' target='_blank' rel="noopener noreferrer"><BiLogoLinkedin /></Link></li> */}
                   </ul>
                 </div>
               </div>

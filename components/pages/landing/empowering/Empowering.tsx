@@ -4,7 +4,8 @@ import "../../../../assets/style/pages/landing/_empowering.scss"
 import EmpoweringImg from "../../../../assets/images/empowering.png"
 import EmpoweringContent from './EmpoweringContent';
 import shape from "../../../../assets/images/plusshape.png"
-import { AiOutlinePlus } from "react-icons/ai"
+// import { AiOutlinePlus } from "react-icons/ai"
+import { AiOutlinePlus } from "@react-icons/all-files/ai/AiOutlinePlus"
 const Empowering = () => {
     return (
         <>
