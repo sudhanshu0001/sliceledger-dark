@@ -2,7 +2,7 @@
     position: relative;
     z-index: 1;
 
-    
+
 
     nav {
         background-color: transparent;
@@ -40,6 +40,19 @@
             font-size: 22.514px;
             font-weight: 500;
             line-height: 33.771px;
+
+            &:hover {
+                img {
+                    filter: invert(0);
+                }
+            }
+
+            img {
+                width: 20px;
+                filter: invert(1);
+                margin-right: 5px;
+
+            }
         }
     }
 
@@ -125,6 +138,11 @@
                             height: 80px;
                         }
                     }
+                    img {
+                        filter: invert(1);
+                        width: 18px;
+                        margin-left: 5px;
+                    }
 
                     h4 {
                         font-size: 18px;
@@ -154,6 +172,17 @@
 
                     &:hover {
                         background-color: #D2C4DB;
+
+                        img {
+                            filter: invert(0);
+                        }
+                    }
+
+                    img {
+                        width: 20px;
+                        filter: invert(1);
+                        margin-right: 5px;
+
                     }
 
                     svg {
@@ -181,13 +210,15 @@
         background-color: var(--primary-color);
     }
 }
+
 @media screen and (max-width:420px) {
-    .navbar-brand img{
+    .navbar-brand img {
         width: 200px;
     }
 }
+
 @media screen and (max-width:300px) {
-    .navbar-brand img{
+    .navbar-brand img {
         width: 150px;
     }
 }

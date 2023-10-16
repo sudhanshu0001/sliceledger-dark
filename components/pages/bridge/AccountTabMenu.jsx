@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { Tooltip, OverlayTrigger } from 'react-bootstrap'
+import { Tooltip, OverlayTrigger, Image } from 'react-bootstrap'
 // import { MdContentCopy } from "react-icons/md"
-import { MdContentCopy } from "@react-icons/all-files/md/MdContentCopy"
+// import { MdContentCopy } from "@react-icons/all-files/md/MdContentCopy"
+import copy from "../../../assets/images/icons/copy.png"
 import Link from 'next/link';
 import { usePathname } from 'next/navigation'
 import { useAccount } from 'wagmi';
@@ -42,7 +43,7 @@ const AccountTabMenu = () => {
                             overlay={renderTooltip}>
 
                             <CopyToClipboard text={address}>
-                                <span className="d-inline-block"> <MdContentCopy onClick={handleSourceCopy} /> </span>
+                                <span className="d-inline-block"> <Image src={copy.src} alt='Copy Icon' fluid loading='lazy' onClick={handleSourceCopy} /> </span>
                             </CopyToClipboard>
 
                         </OverlayTrigger>

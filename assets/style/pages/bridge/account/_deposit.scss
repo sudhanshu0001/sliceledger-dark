@@ -16,7 +16,10 @@
             .account_title {
                 margin-bottom: 30px;
                 color: #fff;
-
+                img{
+                    filter: invert(1);
+                    width: 18px;
+                }
                 h3 {
                     font-family: NekstRegular;
                     font-weight: 600;
@@ -95,6 +98,19 @@
                         }
                     }
                 }
+            }
+        }
+    }
+}
+.pagination_wrap{
+    .page-item{
+        a{
+            background-color: #06071B;
+        }
+        &.active{
+            a{
+
+                background-color: var(--secondary-color);
             }
         }
     }

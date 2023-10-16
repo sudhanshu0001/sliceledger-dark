@@ -1,12 +1,14 @@
 "use client"
 import React, { useState } from 'react'
 import "../../assets/style/common/_footer.scss"
-import { Container, Col, Row, Form, Spinner, ToastContainer } from "react-bootstrap"
+import { Container, Col, Row, Form, Spinner, ToastContainer, Image } from "react-bootstrap"
 import Link from 'next/link';
 // import { AiFillGithub, AiOutlineTwitter, AiOutlineInstagram } from "react-icons/ai"
-import { AiFillGithub } from "@react-icons/all-files/ai/AiFillGithub"
-import { AiOutlineTwitter } from "@react-icons/all-files/ai/AiOutlineTwitter"
-import { AiOutlineInstagram } from "@react-icons/all-files/ai/AiOutlineInstagram"
+// import UilGithub from '@iconscout/react-unicons/icons/UilGithub'
+// import { UilTwitter } from '@iconscout/react-unicons'
+// import { AiFillGithub } from "@react-icons/all-files/ai/AiFillGithub"
+// import { AiOutlineTwitter } from "@react-icons/all-files/ai/AiOutlineTwitter"
+// import { AiOutlineInstagram } from "@react-icons/all-files/ai/AiOutlineInstagram"
 // import { BiLogoLinkedin, BiLogoFacebook, BiLogoTelegram } from "react-icons/bi"
 // import { BiLogoLinkedin } from "@react-icons/all-files/bi/BiLogoLinkedin"
 // import { BiLogoFacebook } from "@react-icons/all-files/bi/BiLogoFacebook"
@@ -16,6 +18,13 @@ import { AiOutlineInstagram } from "@react-icons/all-files/ai/AiOutlineInstagram
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import SuccessModel from './SuccessModel';
+import facebook from "../../assets/images/icons/facebook.png"
+import linkedin from "../../assets/images/icons/linkedin.png"
+import instagram from "../../assets/images/icons/instagram.png"
+import medium from "../../assets/images/icons/medium.png"
+import github from "../../assets/images/icons/github.png"
+import telegram from "../../assets/images/icons/telegram.png"
+import twitter from "../../assets/images/icons/twitter.png"
 const Footer = () => {
   interface IInputs {
     name: string
@@ -199,18 +208,23 @@ const Footer = () => {
                   </ul>
                 </div>
                 <div className='form-social-links-wrap'>
-                  <ul>
+                  {/* <ul>
                     <li><Link href="https://github.com/sliceledger-blockchain" className='form-social-links' target='_blank' rel="noopener noreferrer"><AiFillGithub /></Link></li>
-                    <li><Link href="https://medium.com/@Slice_Ledger" className='form-social-links' target='_blank' rel="noopener noreferrer">M</Link></li>
-                    {/* <li><Link href="https://medium.com/@Slice_Ledger" className='form-social-links' target='_blank' rel="noopener noreferrer"><BsMedium /></Link></li> */}
-                    <li><Link href="https://t.me/sliceledger" className='form-social-links' target='_blank' rel="noopener noreferrer">T</Link></li>
-                    {/* <li><Link href="https://t.me/sliceledger" className='form-social-links' target='_blank' rel="noopener noreferrer"><BiLogoTelegram /></Link></li> */}
-                    <li><Link href="https://www.facebook.com/SliceLedger" className='form-social-links' target='_blank' rel="noopener noreferrer">F</Link></li>
-                    {/* <li><Link href="https://www.facebook.com/SliceLedger" className='form-social-links' target='_blank' rel="noopener noreferrer"><BiLogoFacebook /></Link></li> */}
+                    <li><Link href="https://medium.com/@Slice_Ledger" className='form-social-links' target='_blank' rel="noopener noreferrer"><BsMedium /></Link></li>
+                    <li><Link href="https://t.me/sliceledger" className='form-social-links' target='_blank' rel="noopener noreferrer"><BiLogoTelegram /></Link></li>
+                    <li><Link href="https://www.facebook.com/SliceLedger" className='form-social-links' target='_blank' rel="noopener noreferrer"><BiLogoFacebook /></Link></li>
                     <li><Link href="https://twitter.com/LedgerSlice" className='form-social-links' target='_blank' rel="noopener noreferrer"><AiOutlineTwitter /></Link></li>
                     <li><Link href="https://www.instagram.com/slice.ledger/" className='form-social-links' target='_blank' rel="noopener noreferrer"><AiOutlineInstagram /></Link></li>
-                    <li><Link href="https://www.linkedin.com/company/slice-ledger" className='form-social-links' target='_blank' rel="noopener noreferrer">L</Link></li>
-                    {/* <li><Link href="https://www.linkedin.com/company/slice-ledger" className='form-social-links' target='_blank' rel="noopener noreferrer"><BiLogoLinkedin /></Link></li> */}
+                    <li><Link href="https://www.linkedin.com/company/slice-ledger" className='form-social-links' target='_blank' rel="noopener noreferrer"><BiLogoLinkedin /></Link></li>
+                  </ul> */}
+                  <ul>
+                    <li><Link href="https://github.com/sliceledger-blockchain" className='form-social-links' target='_blank' rel="noopener noreferrer"><Image src={github.src} alt="icon" fluid loading="lazy" /></Link></li>
+                    <li><Link href="https://medium.com/@Slice_Ledger" className='form-social-links' target='_blank' rel="noopener noreferrer"><Image src={medium.src} alt="icon" fluid loading="lazy" /></Link></li>
+                    <li><Link href="https://t.me/sliceledger" className='form-social-links' target='_blank' rel="noopener noreferrer"><Image src={telegram.src} alt="icon" fluid loading="lazy" /></Link></li>
+                    <li><Link href="https://www.facebook.com/SliceLedger" className='form-social-links' target='_blank' rel="noopener noreferrer"><Image src={facebook.src} alt="icon" fluid loading="lazy" /></Link></li>
+                    <li><Link href="https://twitter.com/LedgerSlice" className='form-social-links' target='_blank' rel="noopener noreferrer"><Image src={twitter.src} alt="icon" fluid loading="lazy" /></Link></li>
+                    <li><Link href="https://www.instagram.com/slice.ledger/" className='form-social-links' target='_blank' rel="noopener noreferrer"><Image src={instagram.src} alt="icon" fluid loading="lazy" /></Link></li>
+                    <li><Link href="https://www.linkedin.com/company/slice-ledger" className='form-social-links' target='_blank' rel="noopener noreferrer"><Image src={linkedin.src} alt="icon" fluid loading="lazy" /></Link></li>
                   </ul>
                 </div>
               </div>

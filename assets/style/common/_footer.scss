@@ -44,6 +44,7 @@
                 border-radius: 0px;
                 background-color: transparent;
                 color: var(--text-color);
+
                 &::placeholder {
                     color: var(--text-color);
                     font-size: 16px;
@@ -161,6 +162,11 @@
                         background-color: var(--text-color);
                         display: inline-block;
                         text-align: center;
+                        line-height: 40px;
+
+                        img {
+                            width: 25px;
+                        }
 
                         svg {
                             vertical-align: text-top;
@@ -225,20 +231,30 @@
         z-index: 1;
     }
 }
+
 @media screen and (max-width:360px) {
-    .app-footer .footer-contact-wrap .form-copy li:nth-child(2) a::before, .app-footer .footer-contact-wrap .form-copy li:nth-child(2) a::after{
+
+    .app-footer .footer-contact-wrap .form-copy li:nth-child(2) a::before,
+    .app-footer .footer-contact-wrap .form-copy li:nth-child(2) a::after {
         display: none;
     }
 }
+
 @media screen and (max-width:380px) {
-    .app-footer .footer-contact-wrap .form-social-links-wrap ul li{
+    .app-footer .footer-contact-wrap .form-social-links-wrap ul li {
         padding: 2px;
     }
-    .app-footer .footer-contact-wrap .form-social-links-wrap ul li .form-social-links{
+
+    .app-footer .footer-contact-wrap .form-social-links-wrap ul li .form-social-links {
         height: 30px;
         width: 30px;
+        line-height: 30px;
     }
-    .app-footer .footer-contact-wrap .form-social-links-wrap ul li .form-social-links svg{
+    .app-footer .footer-contact-wrap .form-social-links-wrap ul li .form-social-links img{
+            width: 18px;
+    }
+
+    .app-footer .footer-contact-wrap .form-social-links-wrap ul li .form-social-links svg {
         font-size: 22px;
     }
 }

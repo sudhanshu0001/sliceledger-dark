@@ -5,15 +5,20 @@ import { Navbar, Container, Nav, Image, NavDropdown, Dropdown, OverlayTrigger, T
 import Logo from "../../assets/images/logo.png";
 import "../../assets/style/common/_header.scss";
 // import { AiOutlineArrowRight } from 'react-icons/ai';
-import { AiOutlineArrowRight } from '@react-icons/all-files/ai/AiOutlineArrowRight';
+// import { AiOutlineArrowRight } from '@react-icons/all-files/ai/AiOutlineArrowRight';
+import rightIcon from "../../assets/images/icons/rightArrow.png"
+import upload from "../../assets/images/icons/upload.png"
+import download from "../../assets/images/icons/download.png"
+import power from "../../assets/images/icons/power-off.png"
+import copy from "../../assets/images/icons/copy.png"
 import { usePathname } from 'next/navigation';
 // import { MdContentCopy } from "react-icons/md"
-import { MdContentCopy } from "@react-icons/all-files/md/MdContentCopy"
+// import { MdContentCopy } from "@react-icons/all-files/md/MdContentCopy"
 // import { AiOutlineDownload, AiOutlineUpload } from "react-icons/ai";
-import { AiOutlineDownload } from "@react-icons/all-files/ai/AiOutlineDownload";
-import { AiOutlineUpload } from "@react-icons/all-files/ai/AiOutlineUpload";
+// import { AiOutlineDownload } from "@react-icons/all-files/ai/AiOutlineDownload";
+// import { AiOutlineUpload } from "@react-icons/all-files/ai/AiOutlineUpload";
 // import { BiPowerOff } from "react-icons/bi"
-import { BiPowerOff } from "@react-icons/all-files/bi/BiPowerOff"
+// import { BiPowerOff } from "@react-icons/all-files/bi/BiPowerOff"
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { useAccount, useConnect, useEnsName } from 'wagmi';
 import { disconnect } from '@wagmi/core'
@@ -63,8 +68,10 @@ const Header = () => {
           <Navbar.Collapse id="navbarScroll">
             <Nav className="ms-auto">
               <NavDropdown title="Wallet" id="wallet-dropdown">
-                <NavDropdown.Item as={Link} href="/slice-wallet"><AiOutlineArrowRight /> Slice Wallet</NavDropdown.Item>
-                <NavDropdown.Item as={Link} href="/slice-extension"><AiOutlineArrowRight /> Slice Extension</NavDropdown.Item>
+                {/* <NavDropdown.Item as={Link} href="/slice-wallet"><AiOutlineArrowRight /> Slice Wallet</NavDropdown.Item>
+                <NavDropdown.Item as={Link} href="/slice-extension"><AiOutlineArrowRight /> Slice Extension</NavDropdown.Item> */}
+                <NavDropdown.Item as={Link} href="/slice-wallet"><Image src={rightIcon.src} alt='Right Icon' fluid loading='lazy' /> Slice Wallet</NavDropdown.Item>
+                <NavDropdown.Item as={Link} href="/slice-extension"><Image src={rightIcon.src} alt='Right Icon' fluid loading='lazy' /> Slice Extension</NavDropdown.Item>
               </NavDropdown>
               <Nav.Link as={Link} href="/bridge" className={`${pathName === "/bridge" || pathName === "/bridge/withdraw" || pathName === "/bridge/account" || pathName === "/bridge/account/withdraw" ? "active" : ""}`}>Bridge</Nav.Link>
               <Nav.Link as={Link} href="https://slicechain.gitbook.io/docs/" target='_blank'>Developers</Nav.Link>
@@ -89,14 +96,17 @@ const Header = () => {
                                   delay={{ show: 250, hide: 250 }}
                                   overlay={renderTooltip}>
                                   <CopyToClipboard text={address || ""}>
-                                    <span className="d-inline-block"><MdContentCopy onClick={handleSourceCopy} /> </span>
+                                    <span className="d-inline-block"><Image src={copy.src} alt='Copy Icon' fluid loading='lazy' onClick={handleSourceCopy} /> </span>
                                   </CopyToClipboard>
                                 </OverlayTrigger>
                               </h4>
                             </div>
-                            <Dropdown.Item as={Link} href="/bridge/account"><AiOutlineDownload /> View Deposit</Dropdown.Item>
+                            {/* <Dropdown.Item as={Link} href="/bridge/account"><AiOutlineDownload /> View Deposit</Dropdown.Item>
                             <Dropdown.Item as={Link} href="/bridge/account/withdraw"><AiOutlineUpload /> View Withdrawals</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleDisconnect()}><BiPowerOff /> Disconnect</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleDisconnect()}><BiPowerOff /> Disconnect</Dropdown.Item> */}
+                            <Dropdown.Item as={Link} href="/bridge/account"><Image src={download.src} alt='download Icon' fluid loading='lazy' /> View Deposit</Dropdown.Item>
+                            <Dropdown.Item as={Link} href="/bridge/account/withdraw"><Image src={upload.src} alt='upload Icon' fluid loading='lazy' /> View Withdrawals</Dropdown.Item>
+                            <Dropdown.Item onClick={() => handleDisconnect()}><Image src={power.src} alt='power Icon' fluid loading='lazy' /> Disconnect</Dropdown.Item>
                           </Dropdown.Menu>
                         </Dropdown>
                         :

@@ -5,7 +5,8 @@ import EmpoweringImg from "../../../../assets/images/empowering.png"
 import EmpoweringContent from './EmpoweringContent';
 import shape from "../../../../assets/images/plusshape.png"
 // import { AiOutlinePlus } from "react-icons/ai"
-import { AiOutlinePlus } from "@react-icons/all-files/ai/AiOutlinePlus"
+// import { AiOutlinePlus } from "@react-icons/all-files/ai/AiOutlinePlus"
+import plus from "../../../../assets/images/icons/plus.png"
 const Empowering = () => {
     return (
         <>
@@ -17,9 +18,10 @@ const Empowering = () => {
                         <p><span></span> Unlocking the Power of Roll-ups</p>
                     </div>
                     <div className='plus-shape'>
-                        <Image src={shape.src} alt='shape' fluid loading='lazy' />
+                        <Image src={shape.src} alt='shape' fluid loading='lazy' className='plus-shape-icn' />
                         <div className='icn-wrap'>
-                            <AiOutlinePlus />
+                            <Image src={plus.src} alt='plus' fluid loading='lazy' className='plus-icn'/>
+                            {/* <AiOutlinePlus /> */}
                         </div>
                     </div>
                     <div className='empowering-details'>

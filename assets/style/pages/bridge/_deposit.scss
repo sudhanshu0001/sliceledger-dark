@@ -170,6 +170,11 @@
             font-weight: 700;
             line-height: 24px;
             font-family: NekstBold;
+            img{
+                width: 20px;
+                margin-right: 5px;
+                filter: invert(1);
+            }
             svg{
                 font-size: 24px;
             }

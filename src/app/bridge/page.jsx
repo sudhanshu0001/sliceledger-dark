@@ -4,12 +4,14 @@ import { Ethereum, Dai, Usdt, Usdc } from 'react-web3-icons';
 import { Form, Image, Spinner } from "react-bootstrap"
 // import sliceLogo from "../../public/images/bridge/sliceIcn.png"
 // import { FaWallet } from "react-icons/fa"
-import { FaWallet } from "@react-icons/all-files/fa/FaWallet"
+// import { FaWallet } from "@react-icons/all-files/fa/FaWallet"
+import wallet from "../../../assets/images/icons/wallet.png"
+import swap from "../../../assets/images/icons/swap.png"
 import TabMenu from '../../../components/pages/bridge/TabMenu';
 import { useAccount, useConnect, useNetwork, useSwitchNetwork, useBalance, useToken } from 'wagmi';
 import { InjectedConnector } from 'wagmi/connectors/injected';
 // import { HiSwitchHorizontal } from "react-icons/hi";
-import { HiSwitchHorizontal } from "@react-icons/all-files/hi/HiSwitchHorizontal";
+// import { HiSwitchHorizontal } from "@react-icons/all-files/hi/HiSwitchHorizontal";
 import Web3 from 'web3';
 const optimismSDK = require("@eth-optimism/sdk")
 const ethers = require("ethers")
@@ -289,9 +291,9 @@ const Page = () => {
                 <a className='btn bridge_btn' href='https://metamask.io/' target='_blank'>
                   <Image width={30} src={metamask} alt="metamask icn" fluid /> Please Install Metamask Wallet</a> :
                 !isClient ?
-                  <button className='btn bridge_btn' onClick={() => connect()}><FaWallet /> Connect Wallet</button> :
+                  <button className='btn bridge_btn' onClick={() => connect()}><Image src={wallet.src} alt="wallet" fluid loading='lazy'/>Connect Wallet</button> :
                   chain?.id !== Number(process.env.NEXT_PUBLIC_L1_CHAIN_ID) ?
-                    <button className='btn bridge_btn' onClick={handleSwitch}><HiSwitchHorizontal />Switch to goerli</button> :
+                    <button className='btn bridge_btn' onClick={handleSwitch}><Image src={swap.src} alt="swap" fluid loading='lazy'/>Switch to goerli</button> :
                     <button className='btn bridge_btn' onClick={handleDeposit} disabled={loader ? true : false}> {loader ?
                       <Spinner animation="border" role="status">
                         <span className="visually-hidden">Loading...</span>

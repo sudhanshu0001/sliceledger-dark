@@ -5,14 +5,17 @@ import { Form, Image, Spinner } from "react-bootstrap"
 // import sliceLogo from "../../public/images/bridge/sliceIcn.png"
 // import { FaWallet } from "react-icons/fa"
 // import { MdSecurity } from "react-icons/md"
-import { MdSecurity } from "@react-icons/all-files/md/MdSecurity"
+// import { MdSecurity } from "@react-icons/all-files/md/MdSecurity"
+import  verified from "../../../../assets/images/icons/verified.png"
 import TabMenu from '../../../../components/pages/bridge/TabMenu';
 import { useAccount, useConnect, useNetwork, useSwitchNetwork, useBalance } from 'wagmi'
 import { InjectedConnector } from 'wagmi/connectors/injected';
 // import { IoMdWallet } from "react-icons/io"
-import { IoMdWallet } from "@react-icons/all-files/io/IoMdWallet"
+// import { IoMdWallet } from "@react-icons/all-files/io/IoMdWallet"
+import wallet from "../../../../assets/images/icons/wallet.png"
+import swap from "../../../../assets/images/icons/swap.png"
 // import { HiSwitchHorizontal } from "react-icons/hi";
-import { HiSwitchHorizontal } from "@react-icons/all-files/hi/HiSwitchHorizontal";
+// import { HiSwitchHorizontal } from "@react-icons/all-files/hi/HiSwitchHorizontal";
 const optimismSDK = require("@eth-optimism/sdk")
 const ethers = require("ethers")
 const Withdraw = () => {
@@ -266,7 +269,8 @@ const Withdraw = () => {
           <section className='withdraw_wrap'>
             <div className='withdraw_official_wrap'>
               <div className='official_icn'>
-                <MdSecurity />
+                {/* <MdSecurity /> */}
+                <Image src={verified.src} alt='verified' fluid loading='lazy'/> 
               </div>
               <div className='official_text'>
                 <h3>Use the official bridge</h3>
@@ -312,8 +316,8 @@ const Withdraw = () => {
             <div className='withdraw_btn_wrap'>
               {
                 checkMetaMask ? <a className='btn withdraw_btn' href='https://metamask.io/' target='_blank'><Image src={metamask} alt="metamask icn" fluid /> Please Install Metamask Wallet</a> :
-                  !isClient ? <button className='btn withdraw_btn' onClick={() => connect()}><IoMdWallet />Connect Wallet</button> :
-                    chain?.id !== Number(process.env.NEXT_PUBLIC_L2_CHAIN_ID) ? <button className='btn withdraw_btn' onClick={handleSwitch}><HiSwitchHorizontal />Switch to SLICE Testnet</button> :
+                  !isClient ? <button className='btn withdraw_btn' onClick={() => connect()}><Image src={wallet.src} alt="wallet" fluid loading='lazy'/>Connect Wallet</button> :
+                    chain?.id !== Number(process.env.NEXT_PUBLIC_L2_CHAIN_ID) ? <button className='btn withdraw_btn' onClick={handleSwitch}><Image src={swap.src} alt="swap" fluid loading='lazy'/>Switch to SLICE Testnet</button> :
                       <button className='btn withdraw_btn' onClick={handleWithdraw} disabled={loader ? true : false}>
                         {
                           loader ? <Spinner animation="border" role="status">
