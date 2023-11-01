@@ -269,7 +269,6 @@ const Page = () => {
             {isClient && <p className='wallet_bal mt-2'>{getFormattedBalance(sendToken)}</p>}
             <div className='to_area'>
               <p>To</p>
-              {/* <h6><Image src={sliceLogo.src} alt="Slice" loading='lazy' /> SLICE</h6> */}
               <h6>SLICE Testnet</h6>
             </div>
             <div className='receive_wrap'>

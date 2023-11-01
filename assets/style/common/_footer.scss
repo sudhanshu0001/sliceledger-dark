@@ -13,6 +13,10 @@
         position: absolute;
     }
 
+    .row {
+        align-items: center;
+    }
+
     .container {
         max-width: 1600px;
         position: relative;
@@ -35,7 +39,7 @@
 
     .footer-form-wrap {
         .form-title {
-            margin-bottom: 50px;
+            margin-bottom: 30px;
         }
 
         .footer-form {
@@ -250,8 +254,9 @@
         width: 30px;
         line-height: 30px;
     }
-    .app-footer .footer-contact-wrap .form-social-links-wrap ul li .form-social-links img{
-            width: 18px;
+
+    .app-footer .footer-contact-wrap .form-social-links-wrap ul li .form-social-links img {
+        width: 18px;
     }
 
     .app-footer .footer-contact-wrap .form-social-links-wrap ul li .form-social-links svg {

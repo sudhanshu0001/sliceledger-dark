@@ -260,7 +260,6 @@ const Withdraw = () => {
           <section className='withdraw_wrap'>
             <div className='withdraw_official_wrap'>
               <div className='official_icn'>
-                {/* <MdSecurity /> */}
                 <Image src={verified.src} alt='verified' fluid loading='lazy'/> 
               </div>
               <div className='official_text'>
@@ -271,7 +270,6 @@ const Withdraw = () => {
             </div>
             <div className='from_area'>
               <p>From</p>
-              {/* <h6><Image src={sliceLogo.src} alt="Slice" loading='lazy' /> SLICE</h6> */}
               <h6>SLICE Testnet</h6>
             </div>
             <div className='input_area_wrap'>

@@ -173,11 +173,11 @@ const Footer = () => {
                 <div className='form-contact-title'>
                   <h3 className='h3-title'>Contact Us</h3>
                 </div>
-                <div className='form-contact-info'>
+                {/* <div className='form-contact-info'>
                   <h6 className='h6-title'>Company Information</h6>
                   <p>Address: <br />FDRK3822 Compass Building Al Shohada Road Al Hamra Industrial Zone - FZ - Ras al Khaimah, UAE</p>
                   <p>Contact No: <br />+971 585596272</p>
-                </div>
+                </div> */}
                 <div className='form-contact-links'>
                   <ul className='contact-links'>
                     <li><Link href="/blog">Blog</Link></li>

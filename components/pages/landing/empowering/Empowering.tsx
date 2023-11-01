@@ -19,7 +19,6 @@ const Empowering = () => {
                         <Image src={shape.src} alt='shape' fluid loading='lazy' className='plus-shape-icn' />
                         <div className='icn-wrap'>
                             <Image src={plus.src} alt='plus' fluid loading='lazy' className='plus-icn'/>
-                            {/* <AiOutlinePlus /> */}
                         </div>
                     </div>
                     <div className='empowering-details'>

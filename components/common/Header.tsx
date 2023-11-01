@@ -90,9 +90,6 @@ const Header = () => {
                                 </OverlayTrigger>
                               </h4>
                             </div>
-                            {/* <Dropdown.Item as={Link} href="/bridge/account"><AiOutlineDownload /> View Deposit</Dropdown.Item>
-                            <Dropdown.Item as={Link} href="/bridge/account/withdraw"><AiOutlineUpload /> View Withdrawals</Dropdown.Item>
-                            <Dropdown.Item onClick={() => handleDisconnect()}><BiPowerOff /> Disconnect</Dropdown.Item> */}
                             <Dropdown.Item as={Link} href="/bridge/account"><Image src={download.src} alt='download Icon' fluid loading='lazy' /> View Deposit</Dropdown.Item>
                             <Dropdown.Item as={Link} href="/bridge/account/withdraw"><Image src={upload.src} alt='upload Icon' fluid loading='lazy' /> View Withdrawals</Dropdown.Item>
                             <Dropdown.Item onClick={() => handleDisconnect()}><Image src={power.src} alt='power Icon' fluid loading='lazy' /> Disconnect</Dropdown.Item>
