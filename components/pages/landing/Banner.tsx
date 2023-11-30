@@ -11,7 +11,7 @@ const Banner = () => {
                         <Col sm={7} md={7} lg={7} xl={7}>
                             <article className='banner-article'>
                                 <h1 className='h1-title'>Revolutionizing <br /><span>Blockchain</span><br /> Scalability</h1>
-                                <p>Welcome to Sliceledger, a game-changing technology that is transforming the world of Blockchain scalability. <br />In this era of decentralized finance (DeFi) and non-fungible tokens (NFTs), Blockchain scalability has become<br /> a pressing issue. Sliceledger offer an optimistic solution, and this is where we delve into the details.</p>
+                                <p>Welcome to Sliceledger, a game-changing technology that is transforming the world of Blockchain scalability. In this era of decentralized finance (DeFi) and non-fungible tokens (NFTs), Blockchain scalability has become a pressing issue. Sliceledger offer an optimistic solution, and this is where we delve into the details.</p>
                                 <div className='banner-btn-wrap'>
                                     <button className='btn banner-btn' type='button' onClick={()=>  window.open("http://scan.sliceledger.io", '_ blank')}>Explorer</button>
                                     <button className='btn banner-btn' type='button' onClick={()=>  window.open("https://slicechain.gitbook.io/docs/", '_ blank')}>Document</button>
